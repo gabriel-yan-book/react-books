@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>说明 · GitBook</title>
+        <title>React组件 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="电子书介绍.html" />
+    <link rel="next" href="组件组合&&嵌套.html" />
     
+    
+    <link rel="prev" href="React元素.html" />
     
 
     </head>
@@ -87,7 +89,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -269,7 +271,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="React组件.html">
+        <li class="chapter active" data-level="1.5.2" data-path="React组件.html">
             
                 <a href="React组件.html">
             
@@ -511,7 +513,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >说明</a>
+        <a href="." >React组件</a>
     </h1>
 </div>
 
@@ -526,16 +528,57 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x8BF4;&#x660E;">&#x8BF4;&#x660E;</h1>
-<div style="background: #ccc;width: 100%;height: 200px;display: flex;justify-content: center;align-items: center;">
-    <font style="color: red;font-size: 24px;"> 
-        &#x6587;&#x6863;&#x4FE1;&#x606F; <br>
-        &#x4F5C;&#x8005;&#xFF1A;&#x95EB;&#x4E9A;&#x5175;&#x3010; 457958667@qq.com &#x3011; <br>
-        &#x7248;&#x6743;&#x58F0;&#x660E;&#xFF1A;&#x81EA;&#x7531;&#x8F6C;&#x8F7D;-&#x975E;&#x5546;&#x7528;-&#x975E;&#x884D;&#x751F;-&#x4FDD;&#x6301;&#x7F72;&#x540D;!<a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh" target="_blank">&#x521B;&#x610F;&#x5171;&#x4EAB;3.0&#x8BB8;&#x53EF;&#x8BC1;</a><br>
-        &#x53D1;&#x8868;&#x65E5;&#x671F;&#xFF1A; 2019&#x5E74;10&#x6708;1&#x65E5; <br>
+                                <div style="
+        width: 100%;
+        height: 50px;
+        background: #00FFFF;
+        color: black;
+        line-height: 50px;
+        padding-left: 15px;
+        font-size: 24px;
+        font-weight: bold;
+    "> 
+    React&#x7EC4;&#x4EF6;
+</div>
+
+<h2 id="1-&#x4EC0;&#x4E48;&#x662F;&#x7EC4;&#x4EF6;&#xFF1F;">1. &#x4EC0;&#x4E48;&#x662F;&#x7EC4;&#x4EF6;&#xFF1F;</h2>
+<div style="background: black;text-align: justify;padding: 10px 8px;letter-spacing: 2px;">
+    <font color="greenyellow" style="font-weight: bold;">  
+        &#x7EC4;&#x4EF6;&#x662F;&#x7531;&#x5143;&#x7D20;&#x6784;&#x6210;&#x7684;&#x4E00;&#x4E2A;&#x805A;&#x5408;&#x4F53;
     </font>
 </div>
 
+<h3 id="2-react---&#x51FD;&#x6570;&#x7EC4;&#x4EF6;">2. React - &#x51FD;&#x6570;&#x7EC4;&#x4EF6;</h3>
+<p><div style="background: black;text-align: justify;padding: 10px 8px;letter-spacing: 2px;">
+    <font color="greenyellow" style="font-weight: bold;">  
+        &#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x6700;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x5F0F;&#x5C31;&#x662F;&#x7F16;&#x5199; JavaScript &#x51FD;&#x6570;&#xFF1A;
+    </font>
+</div></p>
+<pre><code class="lang-js">    <span class="hljs-comment">/* &#x58F0;&#x660E;&#x51FD;&#x6570;&#x7EC4;&#x4EF6; */</span>
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Welcome</span>(<span class="hljs-params">props</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello, {props.name}<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>;
+    }
+    <span class="hljs-comment">//OR</span>
+    <span class="hljs-keyword">const</span> Hello = props =&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span> Hello React&#x51FD;&#x6570;&#x7EC4;&#x4EF6; <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
+</code></pre>
+<h3 id="3-react---&#x7C7B;&#x7EC4;&#x4EF6;">3. React - &#x7C7B;&#x7EC4;&#x4EF6;</h3>
+<p><div style="background: black;text-align: justify;padding: 10px 8px;letter-spacing: 2px;">
+    <font color="greenyellow" style="font-weight: bold;">  
+        &#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; ES6 &#x7684; class &#x6765;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;
+    </font>
+</div></p>
+<pre><code class="lang-js">    <span class="hljs-comment">/* &#x58F0;&#x660E;&#x7C7B;&#x7EC4;&#x4EF6; */</span>
+    <span class="hljs-keyword">import</span> React,{ Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Welcome</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span></span>{
+        render () { <span class="hljs-comment">// &#x901A;&#x8FC7;render&#x51FD;&#x6570;&#x6765;&#x6E32;&#x67D3;&#x4E00;&#x4E2A;jsx&#x7ED3;&#x6784;</span>
+            <span class="hljs-keyword">return</span> (
+                &lt;div&gt;
+                    &#x6B22;&#x8FCE;&#x4F7F;&#x7528;&#x897F;&#x9601;&#x7684;React&#x7B14;&#x8BB0;
+                &lt;div&gt;
+            )
+        }
+    }
+</code></pre>
 
                                 
                                 </section>
@@ -563,8 +606,12 @@
 
             
                 
+                <a href="React元素.html" class="navigation navigation-prev " aria-label="Previous page: React元素">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="电子书介绍.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 电子书概述">
+                
+                <a href="组件组合&&嵌套.html" class="navigation navigation-next " aria-label="Next page: 组件的组合&&嵌套">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -575,7 +622,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"说明","level":"1.1","depth":1,"next":{"title":"电子书概述","level":"1.2","depth":1,"path":"电子书介绍.md","ref":"电子书介绍.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2019-10-31T10:04:00.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-06T12:57:22.694Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"React组件","level":"1.5.2","depth":2,"next":{"title":"组件的组合&&嵌套","level":"1.5.3","depth":2,"path":"组件组合&&嵌套.md","ref":"组件组合&&嵌套.md","articles":[]},"previous":{"title":"React元素","level":"1.5.1","depth":2,"path":"React元素.md","ref":"React元素.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"React组件.md","mtime":"2019-11-14T09:50:10.555Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-17T16:08:44.054Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

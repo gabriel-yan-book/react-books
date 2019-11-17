@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>React开发者 · GitBook</title>
+        <title>React特点 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="React概述.html" />
+    <link rel="next" href="React准备.html" />
     
     
-    <link rel="prev" href="React原作者.html" />
+    <link rel="prev" href="React概述.html" />
     
 
     </head>
@@ -142,7 +142,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.2" data-path="React开发者.html">
+        <li class="chapter " data-level="1.3.2" data-path="React开发者.html">
             
                 <a href="React开发者.html">
             
@@ -168,7 +168,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="React特点.html">
+        <li class="chapter active" data-level="1.3.4" data-path="React特点.html">
             
                 <a href="React特点.html">
             
@@ -513,7 +513,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >React开发者</a>
+        <a href="." >React特点</a>
     </h1>
 </div>
 
@@ -537,39 +537,47 @@
         padding-left: 15px;
         font-size: 24px;
         font-weight: bold;
-        margin-bottom: 100px;
+        margin-bottom: 40px;
     "> 
-    React&#x5F00;&#x53D1;&#x8005;
+    React&#x7279;&#x70B9;
 </div>
 
-<ul style="list-style: none;display: flex;justify-content: space-around;">
-    <li style="width: 200px;display:flex;flex-direction: column;justify-content: center;">
-        <img style="align-self: center;margin-bottom: 10px;" width="200" height="100" src="http://img1.imgtn.bdimg.com/it/u=439537222,1241703981&amp;fm=26&amp;gp=0.jpg">
-        <span style="align-self: center;"> FaceBook <span>
-    </span></span></li>
-    <li style="width: 200px;display:flex;flex-direction: column;justify-content: center;">
-        <img style="align-self: center;margin-bottom: 10px;" width="200" height="100" src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2048022932,791453640&amp;fm=26&amp;gp=0.jpg">
-        <span style="align-self: center;"> Instagram <span>
-    </span></span></li>
-    <li style="width: 200px;display:flex;flex-direction: column;justify-content: center;">
-        <img style="align-self: center;margin-bottom: 10px;" width="100" height="100" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K">
-        <span style="align-self: center;"> &#x793E;&#x533A; <span>
-    </span></span></li>
-</ul>
+<h5 id="1-virtual-dom">1. Virtual DOM</h5>
+<h5 id="2-diff&#x7B97;&#x6CD5;">2. Diff&#x7B97;&#x6CD5;</h5>
+<blockquote>
+<p>React 16&#x7248;&#x672C;&#x4E4B;&#x540E;&#x53D1;&#x5E03;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x7B97;&#x6CD5;&#xFF1A; React Filber &#x7B97;&#x6CD5;</p>
+</blockquote>
+<font color="red" style="text-decoration: underline;font-weight: bold;font-size: 24px;"> React Filber </font>
 
-<h4 id="facebook">Facebook</h4>
-<blockquote>
-<p>Facebook&#xFF08;&#x7B80;&#x79F0;FB&#xFF09;&#x662F;&#x6E90;&#x4E8E;&#x7F8E;&#x56FD;&#x7684;&#x793E;&#x4EA4;&#x7F51;&#x7EDC;&#x670D;&#x52A1;&#x53CA;&#x793E;&#x4F1A;&#x5316;&#x5A92;&#x4F53;&#x7F51;&#x7AD9;&#xFF0C;&#x603B;&#x90E8;&#x4F4D;&#x4E8E;&#x7F8E;&#x56FD;&#x52A0;&#x5DDE;&#x95E8;&#x6D1B;&#x5E15;&#x514B;&#x5E02;&#x3002;&#x6210;&#x7ACB;&#x521D;&#x671F;&#x539F;&#x540D;&#x4E3A;&#x201C;thefacebook&#x201D;&#xFF0C;&#x540D;&#x79F0;&#x7684;&#x7075;&#x611F;&#x6765;&#x81EA;&#x7F8E;&#x56FD;&#x9AD8;&#x4E2D;&#x63D0;&#x4F9B;&#x7ED9;&#x5B66;&#x751F;&#x5305;&#x542B;&#x7167;&#x7247;&#x548C;&#x8054;&#x7EDC;&#x8D44;&#x6599;&#x7684;&#x901A;&#x8BAF;&#x5F55;&#xFF08;&#x6216;&#x79F0;&#x82B1;&#x540D;&#x518C;&#xFF09;&#x4E4B;&#x6635;&#x79F0;&#x201C;face book&#x201D;&#x3002;&#x76EE;&#x524D;&#x5C1A;&#x65E0;&#x5B98;&#x65B9;&#x7684;&#x4E2D;&#x6587;&#x8BD1;&#x540D;&#xFF0C;&#x8F83;&#x4E3A;&#x5E7F;&#x6CDB;&#x4F7F;&#x7528;&#x5219;&#x4E3A;&#x8138;&#x4E66;&#x3002;</p>
-</blockquote>
-<h4 id="instagram">instagram</h4>
-<blockquote>
-<p>Instagram&#x662F;Facebook&#x516C;&#x53F8;&#x65D7;&#x4E0B;&#x4E00;&#x6B3E;&#x514D;&#x8D39;&#x63D0;&#x4F9B;&#x5728;&#x7EBF;&#x56FE;&#x7247;&#x53CA;&#x89C6;&#x9891;&#x5206;&#x4EAB;&#x7684;&#x793E;&#x4EA4;&#x5E94;&#x7528;&#x8F6F;&#x4EF6;&#xFF0C;&#x4E8E;2010&#x5E74;10&#x6708;&#x53D1;&#x5E03;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x8BA9;&#x7528;&#x6237;&#x7528;&#x667A;&#x80FD;&#x624B;&#x673A;&#x62CD;&#x4E0B;&#x7167;&#x7247;&#x540E;&#x518D;&#x5C06;&#x4E0D;&#x540C;&#x7684;&#x6EE4;&#x955C;&#x6548;&#x679C;&#x6DFB;&#x52A0;&#x5230;&#x7167;&#x7247;&#x4E0A;&#xFF0C;&#x7136;&#x540E;&#x5206;&#x4EAB;&#x5230;Facebook&#x3001;Twitter&#x3001;Tumblr&#x53CA;Flickr&#x7B49;&#x793E;&#x4EA4;&#x7F51;&#x7EDC;&#x670D;&#x52A1;&#x3001;&#x6216;&#x662F;Instagram&#x7684;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x3002;&#x5728;&#x82F1;&#x8BED;&#x56FD;&#x5BB6;&#x7B80;&#x79F0;insta&#xFF0C;&#x53F0;&#x6E7E;&#x4E0E;&#x9999;&#x6E2F;&#x901A;&#x5E38;&#x7B80;&#x79F0;IG&#xFF0C;&#x5728;&#x4E2D;&#x56FD;&#x5927;&#x9646;&#x7B80;&#x79F0;ins&#x3002;</p>
-</blockquote>
-<h4 id="&#x793E;&#x533A;">&#x793E;&#x533A;</h4>
-<blockquote>
-<p>&#x7531;React&#x5F00;&#x53D1;&#x8005;&#x3001;&#x4F7F;&#x7528;&#x8005;&#x548C;&#x76F8;&#x5173;&#x4EBA;&#x5458;&#x7EC4;&#x6210;&#x7684;&#x4E00;&#x4E2A;&#x5F00;&#x653E;&#x6027;&#x96C6;&#x4F53;</p>
-</blockquote>
+<div style="background: #ccc;text-align: justify;padding: 10px 8px;letter-spacing: 2px;text-indent: 2em;">
+&#x5F53;React&#x51B3;&#x5B9A;&#x8981;&#x52A0;&#x8F7D;&#x6216;&#x8005;&#x66F4;&#x65B0;&#x7EC4;&#x4EF6;&#x6811;&#x65F6;&#xFF0C;&#x4F1A;&#x505A;&#x5F88;&#x591A;&#x4E8B;&#xFF0C;&#x6BD4;&#x5982;&#x8C03;&#x7528;&#x5404;&#x4E2A;&#x7EC4;&#x4EF6;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#xFF0C;&#x8BA1;&#x7B97;&#x548C;&#x6BD4;&#x5BF9;Virtual DOM&#xFF0C;&#x6700;&#x540E;&#x66F4;&#x65B0;DOM&#x6811;&#xFF0C;&#x8FD9;&#x6574;&#x4E2A;&#x8FC7;&#x7A0B;&#x662F;&#x540C;&#x6B65;&#x8FDB;&#x884C;&#x7684;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x53EA;&#x8981;&#x4E00;&#x4E2A;&#x52A0;&#x8F7D;&#x6216;&#x8005;&#x66F4;&#x65B0;&#x8FC7;&#x7A0B;&#x5F00;&#x59CB;&#xFF0C;&#x4E2D;&#x9014;&#x4E0D;&#x4F1A;&#x4E2D;&#x65AD;&#x3002;&#x56E0;&#x4E3A;JavaScript&#x5355;&#x7EBF;&#x7A0B;&#x7684;&#x7279;&#x70B9;&#xFF0C;&#x5982;&#x679C;&#x7EC4;&#x4EF6;&#x6811;&#x5F88;&#x5927;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6BCF;&#x4E2A;&#x540C;&#x6B65;&#x4EFB;&#x52A1;&#x8017;&#x65F6;&#x592A;&#x957F;&#xFF0C;&#x5C31;&#x4F1A;&#x51FA;&#x73B0;&#x5361;&#x987F;&#x3002;
 
+<p>
+<font color="red">React Fiber&#x7684;&#x65B9;&#x6CD5;&#x5176;&#x5B9E;&#x5F88;&#x7B80;&#x5355;&#x2014;&#x2014;&#x5206;&#x7247;&#x3002;&#x628A;&#x4E00;&#x4E2A;&#x8017;&#x65F6;&#x957F;&#x7684;&#x4EFB;&#x52A1;&#x5206;&#x6210;&#x5F88;&#x591A;&#x5C0F;&#x7247;</font>&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x5C0F;&#x7247;&#x7684;&#x8FD0;&#x884C;&#x65F6;&#x95F4;&#x5F88;&#x77ED;&#xFF0C;&#x867D;&#x7136;&#x603B;&#x65F6;&#x95F4;&#x4F9D;&#x7136;&#x5F88;&#x957F;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x6BCF;&#x4E2A;&#x5C0F;&#x7247;&#x6267;&#x884C;&#x5B8C;&#x4E4B;&#x540E;&#xFF0C;&#x90FD;&#x7ED9;&#x5176;&#x4ED6;&#x4EFB;&#x52A1;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x7684;&#x673A;&#x4F1A;&#xFF0C;&#x8FD9;&#x6837;&#x552F;&#x4E00;&#x7684;&#x7EBF;&#x7A0B;&#x5C31;&#x4E0D;&#x4F1A;&#x88AB;&#x72EC;&#x5360;&#xFF0C;&#x5176;&#x4ED6;&#x4EFB;&#x52A1;&#x4F9D;&#x7136;&#x6709;&#x8FD0;&#x884C;&#x7684;&#x673A;&#x4F1A;&#x3002;
+</p>
+
+</div>
+
+<h5 id="3-&#x7EC4;&#x4EF6;&#x7CFB;&#x7EDF;&#x3010;-component-&#x3011;">3. &#x7EC4;&#x4EF6;&#x7CFB;&#x7EDF;&#x3010; Component &#x3011;</h5>
+<div style="background: #ccc;text-align: justify;padding: 10px 8px;letter-spacing: 2px;text-indent: 2em;">
+react&#x6700;&#x6838;&#x5FC3;&#x7684;&#x601D;&#x60F3;&#x662F;&#x5C06;&#x9875;&#x9762;&#x4E2D;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x533A;&#x57DF;&#x6216;&#x8005;&#x5143;&#x7D20;&#x90FD;&#x53EF;&#x4EE5;&#x770B;&#x505A;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;
+</div>
+
+<h5 id="4-&#x5355;&#x5411;&#x6570;&#x636E;&#x6D41;">4. &#x5355;&#x5411;&#x6570;&#x636E;&#x6D41;</h5>
+<div style="background: #ccc;text-align: justify;padding: 10px 8px;letter-spacing: 2px;text-indent: 2em;">
+reactjs&#x7684;&#x6838;&#x5FC3;&#x5185;&#x5BB9;&#x5C31;&#x662F;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#xFF0C;&#x6240;&#x8C13;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x6307;&#x7684;&#x662F;&#x53EA;&#x8981;&#x5C06;&#x4E00;&#x4E9B;&#x670D;&#x52A1;&#x7AEF;&#x7684;&#x6570;&#x636E;&#x548C;&#x524D;&#x7AEF;&#x9875;&#x9762;&#x7ED1;&#x5B9A;&#x597D;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x53EA;&#x5173;&#x6CE8;&#x5B9E;&#x73B0;&#x4E1A;&#x52A1;&#x5C31;&#x884C;&#x4E86;
+</div>
+
+<h5 id="5-jsx&#x8BED;&#x6CD5;">5. JSX&#x8BED;&#x6CD5;</h5>
+<div style="background: #ccc;text-align: justify;padding: 10px 8px;letter-spacing: 2px;text-indent: 2em;">
+    &#x4E3A;&#x4E86;&#x66F4;&#x52A0;&#x4FBF;&#x5229;&#x7684;&#x6A21;&#x62DF;DOM&#x7ED3;&#x6784;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x4E86;JSX&#x8BED;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x8BA9;&#x6211;&#x4EEC;&#x5728;JS&#x4E2D;&#x7F16;&#x8BD1;DOM&#x7ED3;&#x6784;
+    <p> React&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x811A;&#x624B;&#x67B6;&#x3010; webpack&#x6784;&#x5EFA; &#x3011;&#x6765;&#x5BF9;JSX&#x8FDB;&#x884C;&#x7F16;&#x8BD1; </p>
+</div>
+
+<h5 id="6-&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;">6. &#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;</h5>
+<div style="background: #ccc;text-align: justify;padding: 10px 8px;letter-spacing: 2px;text-indent: 2em;">
+    JS&#x7684;&#x6700;&#x5927;&#x7279;&#x70B9;&#x5C31;&#x662F;&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;&#xFF0C;&#x5728;React&#x4E2D;&#xFF0C;&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;&#x53EF;&#x8C13;&#x5F0F;&#x65E0;&#x5904;&#x4E0D;&#x89C1;
+</div>
                                 
                                 </section>
                             
@@ -596,12 +604,12 @@
 
             
                 
-                <a href="React原作者.html" class="navigation navigation-prev " aria-label="Previous page: React原作者">
+                <a href="React概述.html" class="navigation navigation-prev " aria-label="Previous page: React概述">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="React概述.html" class="navigation navigation-next " aria-label="Next page: React概述">
+                <a href="React准备.html" class="navigation navigation-next " aria-label="Next page: React准备">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -612,7 +620,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"React开发者","level":"1.3.2","depth":2,"next":{"title":"React概述","level":"1.3.3","depth":2,"path":"React概述.md","ref":"React概述.md","articles":[]},"previous":{"title":"React原作者","level":"1.3.1","depth":2,"path":"React原作者.md","ref":"React原作者.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"React开发者.md","mtime":"2019-10-21T15:33:57.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-06T12:57:22.694Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"React特点","level":"1.3.4","depth":2,"next":{"title":"React准备","level":"1.4","depth":1,"path":"React准备.md","ref":"React准备.md","articles":[{"title":"CRA","level":"1.4.1","depth":2,"path":"CRA.md","ref":"CRA.md","articles":[]},{"title":"DVA","level":"1.4.2","depth":2,"path":"DVA.md","ref":"DVA.md","articles":[]},{"title":"UMI","level":"1.4.3","depth":2,"path":"UMI.md","ref":"UMI.md","articles":[]}]},"previous":{"title":"React概述","level":"1.3.3","depth":2,"path":"React概述.md","ref":"React概述.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"React特点.md","mtime":"2019-11-14T08:34:29.036Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-17T16:08:44.054Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
