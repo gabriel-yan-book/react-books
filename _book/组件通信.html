@@ -1,0 +1,887 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>组件通信 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="组件的生命周期.md" />
+    
+    
+    <link rel="prev" href="组件的事件.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="电子书介绍.html">
+            
+                <a href="电子书介绍.html">
+            
+                    
+                    电子书概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    React介绍
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="React原作者.html">
+            
+                <a href="React原作者.html">
+            
+                    
+                    React原作者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="React开发者.html">
+            
+                <a href="React开发者.html">
+            
+                    
+                    React开发者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="React概述.html">
+            
+                <a href="React概述.html">
+            
+                    
+                    React概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="React特点.html">
+            
+                <a href="React特点.html">
+            
+                    
+                    React特点
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="React准备.html">
+            
+                <a href="React准备.html">
+            
+                    
+                    React准备
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="CRA.html">
+            
+                <a href="CRA.html">
+            
+                    
+                    CRA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="DVA.html">
+            
+                <a href="DVA.html">
+            
+                    
+                    DVA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="UMI.html">
+            
+                <a href="UMI.html">
+            
+                    
+                    UMI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    React基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="React元素.html">
+            
+                <a href="React元素.html">
+            
+                    
+                    React元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="React组件.html">
+            
+                <a href="React组件.html">
+            
+                    
+                    React组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="组件组合&&嵌套.html">
+            
+                <a href="组件组合&&嵌套.html">
+            
+                    
+                    组件的组合&&嵌套
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="组件的样式.html">
+            
+                <a href="组件的样式.html">
+            
+                    
+                    组件的样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="组件的数据形式.html">
+            
+                <a href="组件的数据形式.html">
+            
+                    
+                    组件的数据形式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="组件的数据渲染.html">
+            
+                <a href="组件的数据渲染.html">
+            
+                    
+                    组件的数据渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="组件的事件.html">
+            
+                <a href="组件的事件.html">
+            
+                    
+                    组件的事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.8" data-path="组件通信.html">
+            
+                <a href="组件通信.html">
+            
+                    
+                    组件通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="组件的生命周期.md">
+            
+                <span>
+            
+                    
+                    组件的生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    React高级
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="高阶组件.md">
+            
+                <span>
+            
+                    
+                    高阶组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="React_Hooks.md">
+            
+                <span>
+            
+                    
+                    React Hooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="React路由.md">
+            
+                <span>
+            
+                    
+                    React路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="React状态管理.md">
+            
+                <span>
+            
+                    
+                    React状态管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    React应用
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="React组件库.md">
+            
+                <span>
+            
+                    
+                    React组件库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >组件通信</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div style="
+        width: 100%;
+        height: 50px;
+        background: #00FFFF;
+        color: black;
+        line-height: 50px;
+        padding-left: 15px;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 40px;
+    "> 
+  React - &#x7EC4;&#x4EF6;&#x901A;&#x4FE1;
+</div>
+
+<h2 id="1-&#x5206;&#x7C7B;&#xFF1A;">1. &#x5206;&#x7C7B;&#xFF1A;</h2>
+<ul>
+<li><p>&#x7236;&#x5B50;&#x7EC4;&#x4EF6;&#x901A;&#x4FE1;</p>
+</li>
+<li><p>&#x5B50;&#x7236;&#x7EC4;&#x4EF6;&#x901A;&#x4FE1;</p>
+</li>
+<li><p>&#x975E;&#x7236;&#x5B50;&#x7EC4;&#x4EF6;&#x901A;&#x4FE1;</p>
+</li>
+<li><p>&#x8DE8;&#x7EC4;&#x4EF6;&#x901A;&#x4FE1;</p>
+</li>
+<li><p>&#x591A;&#x7EC4;&#x4EF6;&#x72B6;&#x6001;&#x5171;&#x4EAB;</p>
+</li>
+</ul>
+<h2 id="2-&#x7236;&#x7EC4;&#x4EF6;&#x4E0E;&#x5B50;&#x7EC4;&#x4EF6;&#x901A;&#x4FE1;">2. &#x7236;&#x7EC4;&#x4EF6;&#x4E0E;&#x5B50;&#x7EC4;&#x4EF6;&#x901A;&#x4FE1;</h2>
+<ul>
+<li>&#x7236;&#x7EC4;&#x4EF6;&#x5C06;&#x81EA;&#x5DF1;&#x7684;&#x72B6;&#x6001;&#x4F20;&#x9012;&#x7ED9;&#x5B50;&#x7EC4;&#x4EF6;&#xFF0C;&#x5B50;&#x7EC4;&#x4EF6;&#x5F53;&#x505A;&#x5C5E;&#x6027;&#x6765;&#x63A5;&#x6536;&#xFF0C;&#x5F53;&#x7236;&#x7EC4;&#x4EF6;&#x66F4;&#x6539;&#x81EA;&#x5DF1;&#x72B6;&#x6001;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5B50;&#x7EC4;&#x4EF6;&#x63A5;&#x6536;&#x5230;&#x7684;&#x5C5E;&#x6027;&#x5C31;&#x4F1A;&#x53D1;&#x751F;&#x6539;&#x53D8;</li>
+<li>&#x7236;&#x7EC4;&#x4EF6;&#x5229;&#x7528;ref&#x5BF9;&#x5B50;&#x7EC4;&#x4EF6;&#x505A;&#x6807;&#x8BB0;&#xFF0C;&#x901A;&#x8FC7;&#x8C03;&#x7528;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x65B9;&#x6CD5;&#x4EE5;&#x66F4;&#x6539;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x72B6;&#x6001;,&#x4E5F;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x65B9;&#x6CD5;..</li>
+</ul>
+<pre><code class="lang-js">   <span class="hljs-comment">/* Father.js&#x5982;&#x4E0B; */</span>
+  <span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+  <span class="hljs-keyword">import</span> Son <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./Son&apos;</span>
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Father</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+
+    <span class="hljs-keyword">constructor</span>(props) {
+      <span class="hljs-keyword">super</span>(props)
+
+      <span class="hljs-keyword">this</span>.state = {
+        money: <span class="hljs-number">2000</span>
+      }
+    }
+
+
+    render() {
+      <span class="hljs-keyword">const</span> { money } = <span class="hljs-keyword">this</span>.state 
+      <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">Son</span> <span class="hljs-attr">money</span> = { <span class="hljs-attr">money</span> } /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      )
+    }
+  }
+</span></code></pre>
+<pre><code class="lang-js">  <span class="hljs-comment">/* Son.js&#x5B9A;&#x4E49;&#x5982;&#x4E0B; */</span>
+  <span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Son</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+    render() {
+      <span class="hljs-keyword">const</span> { money } = <span class="hljs-keyword">this</span>.props 
+      <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span> &#x8001;&#x7238;&#x7ED9;&#x4E86;&#x6211;&#xFF1A; { money } <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+      )
+    }
+  }
+</code></pre>
+<h2 id="3-&#x5B50;&#x7EC4;&#x4EF6;&#x4E0E;&#x7236;&#x7EC4;&#x4EF6;&#x901A;&#x4FE1;">3. &#x5B50;&#x7EC4;&#x4EF6;&#x4E0E;&#x7236;&#x7EC4;&#x4EF6;&#x901A;&#x4FE1;</h2>
+<ul>
+<li>&#x7236;&#x7EC4;&#x4EF6;&#x5C06;&#x81EA;&#x5DF1;&#x7684;&#x67D0;&#x4E2A;&#x65B9;&#x6CD5;&#x4F20;&#x9012;&#x7ED9;&#x5B50;&#x7EC4;&#x4EF6;&#xFF0C;&#x5728;&#x65B9;&#x6CD5;&#x91CC;&#x53EF;&#x4EE5;&#x505A;&#x4EFB;&#x610F;&#x64CD;&#x4F5C;&#xFF0C;&#x6BD4;&#x5982;&#x53EF;&#x4EE5;&#x66F4;&#x6539;&#x72B6;&#x6001;&#xFF0C;&#x5B50;&#x7EC4;&#x4EF6;&#x901A;&#x8FC7;this.props&#x63A5;&#x6536;&#x5230;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x65B9;&#x6CD5;&#x540E;&#x8C03;&#x7528;&#x3002;</li>
+</ul>
+<pre><code class="lang-js">  <span class="hljs-comment">/* Father&#x7EC4;&#x4EF6;&#x5B9A;&#x4E49;&#x5982;&#x4E0B; */</span>
+  <span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+  <span class="hljs-keyword">import</span> OneOne <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./OneOne&apos;</span>
+
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">One</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+
+    <span class="hljs-keyword">constructor</span>(props) {
+      <span class="hljs-keyword">super</span>(props)
+
+      <span class="hljs-keyword">this</span>.state = {
+        jk: <span class="hljs-number">0</span>
+      }
+    }
+
+    changeJk = val  =&gt; {
+      <span class="hljs-keyword">this</span>.setState({
+        jk: val 
+      })
+    }
+
+
+    render() {
+      <span class="hljs-keyword">const</span> { jk } = <span class="hljs-keyword">this</span>.state 
+      <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+
+          <span class="hljs-tag">&lt;<span class="hljs-name">OneOne</span> <span class="hljs-attr">changeJk</span> = { <span class="hljs-attr">this.changeJk</span> }/&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span> &#x513F;&#x5B50;&#x7ED9;&#x4E86;&#x6211; { jk }  &#x7EA2;&#x5305; <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      )
+    }
+  }
+</span></code></pre>
+<pre><code class="lang-js">  <span class="hljs-comment">/* Son&#x7EC4;&#x4EF6;&#x5B9A;&#x4E49;&#x5982;&#x4E0B; */</span>
+  <span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OneOne</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+
+    <span class="hljs-keyword">constructor</span>(props) {
+      <span class="hljs-keyword">super</span>(props)
+
+      <span class="hljs-keyword">this</span>.state = {
+        hongbao: <span class="hljs-number">80000</span>
+      }
+    }
+
+
+    render() {
+      <span class="hljs-keyword">const</span> { changeJk } = <span class="hljs-keyword">this</span>.props 
+      <span class="hljs-keyword">const</span> { hongbao } = <span class="hljs-keyword">this</span>.state 
+      <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span> = {() =&gt;</span> { changeJk( hongbao ) }}&gt; &#x7ED9;&#x7EA2;&#x5305; <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+      )
+    }
+  }
+</code></pre>
+<h2 id="4-&#x8DE8;&#x7EC4;&#x4EF6;&#x901A;&#x4FE1;">4. &#x8DE8;&#x7EC4;&#x4EF6;&#x901A;&#x4FE1;</h2>
+<p>&#x5728;react&#x6CA1;&#x6709;&#x7C7B;&#x4F3C;vue&#x4E2D;&#x7684;&#x4E8B;&#x4EF6;&#x603B;&#x7EBF;&#x6765;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x80FD;&#x501F;&#x52A9;&#x5B83;&#x4EEC;&#x5171;&#x540C;&#x7684;&#x7236;&#x7EA7;&#x7EC4;&#x4EF6;&#x6765;&#x5B9E;&#x73B0;&#xFF0C;&#x5C06;&#x975E;&#x7236;&#x5B50;&#x5173;&#x7CFB;&#x88C5;&#x6362;&#x6210;&#x591A;&#x7EF4;&#x5EA6;&#x7684;&#x7236;&#x5B50;&#x5173;&#x7CFB;&#x3002;react&#x63D0;&#x4F9B;&#x4E86;context api&#x6765;&#x5B9E;&#x73B0;&#x8DE8;&#x7EC4;&#x4EF6;&#x901A;&#x4FE1;, React 16.3&#x4E4B;&#x540E;&#x7684;contextapi&#x8F83;&#x4E4B;&#x524D;&#x7684;&#x597D;&#x7528;&#x3002;</p>
+<p>&#x5B9E;&#x4F8B;&#xFF0C;&#x4F7F;&#x7528;context &#x5B9E;&#x73B0;&#x8D2D;&#x7269;&#x8F66;&#x4E2D;&#x7684;&#x52A0;&#x51CF;&#x529F;&#x80FD;</p>
+<pre><code class="lang-js">    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">App</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+      render() {
+        <span class="hljs-keyword">return</span> &lt;Toolbar theme=&quot;dark&quot; /&gt;;
+      }
+    }
+
+    function Toolbar(props) {
+      // Toolbar &#x7EC4;&#x4EF6;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x989D;&#x5916;&#x7684;&#x201C;theme&#x201D;&#x5C5E;&#x6027;&#xFF0C;&#x7136;&#x540E;&#x4F20;&#x9012;&#x7ED9; ThemedButton &#x7EC4;&#x4EF6;&#x3002;
+      // &#x5982;&#x679C;&#x5E94;&#x7528;&#x4E2D;&#x6BCF;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x6309;&#x94AE;&#x90FD;&#x9700;&#x8981;&#x77E5;&#x9053; theme &#x7684;&#x503C;&#xFF0C;&#x8FD9;&#x4F1A;&#x662F;&#x4EF6;&#x5F88;&#x9EBB;&#x70E6;&#x7684;&#x4E8B;&#xFF0C;
+      // &#x56E0;&#x4E3A;&#x5FC5;&#x987B;&#x5C06;&#x8FD9;&#x4E2A;&#x503C;&#x5C42;&#x5C42;&#x4F20;&#x9012;&#x6240;&#x6709;&#x7EC4;&#x4EF6;&#x3002;
+      return (
+        &lt;div&gt;
+          &lt;ThemedButton theme={props.theme} /&gt;
+        &lt;/div&gt;
+      );
+    }
+
+    class ThemedButton extends React.Component {
+      render() {
+        return &lt;Button theme={this.props.theme} /&gt;;
+      }
+    }
+    // Context &#x53EF;&#x4EE5;&#x8BA9;&#x6211;&#x4EEC;&#x65E0;&#x987B;&#x660E;&#x786E;&#x5730;&#x4F20;&#x904D;&#x6BCF;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF0C;&#x5C31;&#x80FD;&#x5C06;&#x503C;&#x6DF1;&#x5165;&#x4F20;&#x9012;&#x8FDB;&#x7EC4;&#x4EF6;&#x6811;&#x3002;
+    // &#x4E3A;&#x5F53;&#x524D;&#x7684; theme &#x521B;&#x5EFA;&#x4E00;&#x4E2A; context&#xFF08;&#x201C;light&#x201D;&#x4E3A;&#x9ED8;&#x8BA4;&#x503C;&#xFF09;&#x3002;
+    const ThemeContext = React.createContext(&apos;light&apos;);
+
+    class App extends React.Component {
+      render() {
+        // &#x4F7F;&#x7528;&#x4E00;&#x4E2A; Provider &#x6765;&#x5C06;&#x5F53;&#x524D;&#x7684; theme &#x4F20;&#x9012;&#x7ED9;&#x4EE5;&#x4E0B;&#x7684;&#x7EC4;&#x4EF6;&#x6811;&#x3002;
+        // &#x65E0;&#x8BBA;&#x591A;&#x6DF1;&#xFF0C;&#x4EFB;&#x4F55;&#x7EC4;&#x4EF6;&#x90FD;&#x80FD;&#x8BFB;&#x53D6;&#x8FD9;&#x4E2A;&#x503C;&#x3002;
+        // &#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06; &#x201C;dark&#x201D; &#x4F5C;&#x4E3A;&#x5F53;&#x524D;&#x7684;&#x503C;&#x4F20;&#x9012;&#x4E0B;&#x53BB;&#x3002;
+        return (
+          &lt;ThemeContext.Provider value=&quot;dark&quot;&gt;
+            &lt;Toolbar /&gt;
+          &lt;/ThemeContext.Provider&gt;
+        );
+      }
+    }
+
+    // &#x4E2D;&#x95F4;&#x7684;&#x7EC4;&#x4EF6;&#x518D;&#x4E5F;&#x4E0D;&#x5FC5;&#x6307;&#x660E;&#x5F80;&#x4E0B;&#x4F20;&#x9012; theme &#x4E86;&#x3002;
+    function Toolbar(props) {
+      return (
+        &lt;div&gt;
+          &lt;ThemedButton /&gt;
+        &lt;/div&gt;
+      );
+    }
+
+    class ThemedButton extends React.Component {
+      // &#x6307;&#x5B9A; contextType &#x8BFB;&#x53D6;&#x5F53;&#x524D;&#x7684; theme context&#x3002;
+      // React &#x4F1A;&#x5F80;&#x4E0A;&#x627E;&#x5230;&#x6700;&#x8FD1;&#x7684; theme Provider&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;&#x5B83;&#x7684;&#x503C;&#x3002;
+      // &#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x5F53;&#x524D;&#x7684; theme &#x503C;&#x4E3A; &#x201C;dark&#x201D;&#x3002;
+      static contextType = ThemeContext;
+      render() {
+        return &lt;Button theme={this.context} /&gt;;
+      }
+    }
+</code></pre>
+<h2 id="5-&#x975E;&#x7236;&#x5B50;&#x7EC4;&#x4EF6;&#x901A;&#x4FE1;">5. &#x975E;&#x7236;&#x5B50;&#x7EC4;&#x4EF6;&#x901A;&#x4FE1;</h2>
+<pre><code class="lang-js">  <span class="hljs-comment">/* Father.js&#x5B9A;&#x4E49;&#x5982;&#x4E0B; */</span>
+  <span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+  <span class="hljs-keyword">import</span> Brother <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./Brother&apos;</span>
+  <span class="hljs-keyword">import</span> Sister <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./Sister&apos;</span>
+
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Father</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+    <span class="hljs-comment">/* &#x7236;&#x7EC4;&#x4EF6; */</span>
+
+    cry = () =&gt; {
+      <span class="hljs-comment">// this.refs.brother.cry()</span>
+      <span class="hljs-keyword">this</span>.brother.cry()
+    }
+
+    render() {
+      <span class="hljs-keyword">return</span> (
+        &lt;div&gt;
+          &lt;Sister cry = { this.cry }/&gt;
+          {/* &lt;Brother ref = &quot;brother&quot;/&gt; */}
+          &lt;Brother ref = { el =&gt; this.brother = el }/&gt;
+        &lt;/div&gt;
+      )
+    }
+  }
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-comment">/* Brother.js&#x5B9A;&#x4E49;&#x5982;&#x4E0B; */</span>
+<span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Brother</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+
+  <span class="hljs-keyword">constructor</span>(props) {
+    <span class="hljs-keyword">super</span>(props)
+
+    <span class="hljs-keyword">this</span>.state = {
+       f: <span class="hljs-literal">false</span> 
+    }
+  }
+
+  cry = () =&gt; {
+    <span class="hljs-keyword">this</span>.setState({
+      f: <span class="hljs-literal">true</span> 
+    })
+  }
+
+  render() {
+    <span class="hljs-keyword">const</span> { f } = <span class="hljs-keyword">this</span>.state 
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+          { f &amp;&amp; <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span> = &quot;<span class="hljs-attr">http:</span>//<span class="hljs-attr">5b0988e595225.cdn.sohucs.com</span>/<span class="hljs-attr">q_70</span>,<span class="hljs-attr">c_zoom</span>,<span class="hljs-attr">w_640</span>/<span class="hljs-attr">images</span>/<span class="hljs-attr">20180113</span>/<span class="hljs-attr">db7a23a0460c4ffe80533a64c47c94ee.gif</span>&quot; /&gt;</span>}
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    )
+  }
+}
+</span></code></pre>
+<pre><code class="lang-js"><span class="hljs-comment">/* Sister&#x7EC4;&#x4EF6;&#x5B9A;&#x4E49;&#x5982;&#x4E0B; */</span>
+<span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Sister</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+
+
+  hick = () =&gt; {
+    <span class="hljs-comment">//&#x6267;&#x884C;&#x63CD;&#x5F1F;&#x5F1F;</span>
+  }
+
+  render() {
+    <span class="hljs-keyword">const</span> { cry } = <span class="hljs-keyword">this</span>.props 
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span> = { <span class="hljs-attr">cry</span> }&gt;</span> &#x63CD;&#x5F1F;&#x5F1F; <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+  }
+
+}
+</code></pre>
+<h2 id="5-&#x72B6;&#x6001;&#x7BA1;&#x7406;">5. &#x72B6;&#x6001;&#x7BA1;&#x7406;</h2>
+<blockquote>
+<p>&#x8BF4;&#x660E;&#xFF1A; &#x72B6;&#x6001;&#x7BA1;&#x7406;&#x6211;&#x4EEC;&#x5C06;&#x5728;&#x540E;&#x9762;&#x8BB2;&#x89E3;</p>
+</blockquote>
+<p>&#x590D;&#x6742;&#x7684;&#x975E;&#x7236;&#x5B50;&#x7EC4;&#x4EF6;&#x901A;&#x4FE1;&#x5728;react&#x4E2D;&#x5F88;&#x96BE;&#x5904;&#x7406;&#xFF0C;&#x591A;&#x7EC4;&#x4EF6;&#x95F4;&#x7684;&#x6570;&#x636E;&#x5171;&#x4EAB;&#x4E5F;&#x4E0D;&#x597D;&#x5904;&#x7406;&#xFF0C;&#x5728;&#x5B9E;&#x9645;&#x7684;&#x5DE5;&#x4F5C;&#x4E2D;&#x6211;&#x4EEC;&#x4F1A;&#x4F7F;&#x7528;flux&#x3001;redux&#x3001;mobx&#x6765;&#x5B9E;&#x73B0;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="组件的事件.html" class="navigation navigation-prev " aria-label="Previous page: 组件的事件">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="组件的生命周期.md" class="navigation navigation-next " aria-label="Next page: 组件的生命周期">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"组件通信","level":"1.5.8","depth":2,"next":{"title":"组件的生命周期","level":"1.5.9","depth":2,"path":"组件的生命周期.md","ref":"组件的生命周期.md","articles":[]},"previous":{"title":"组件的事件","level":"1.5.7","depth":2,"path":"组件的事件.md","ref":"组件的事件.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"组件通信.md","mtime":"2019-11-18T15:29:22.945Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-18T15:28:47.083Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

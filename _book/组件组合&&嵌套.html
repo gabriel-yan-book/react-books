@@ -310,9 +310,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="组件的数据形式.md">
+        <li class="chapter " data-level="1.5.5" data-path="组件的数据形式.html">
             
-                <span>
+                <a href="组件的数据形式.html">
             
                     
                     组件的数据形式
@@ -323,9 +323,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.6" data-path="组件的数据渲染">
+        <li class="chapter " data-level="1.5.6" data-path="组件的数据渲染.html">
             
-                <span>
+                <a href="组件的数据渲染.html">
             
                     
                     组件的数据渲染
@@ -336,9 +336,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.7" data-path="组件的事件">
+        <li class="chapter " data-level="1.5.7" data-path="组件的事件.html">
             
-                <span>
+                <a href="组件的事件.html">
             
                     
                     组件的事件
@@ -349,9 +349,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.8" data-path="组件通信">
+        <li class="chapter " data-level="1.5.8" data-path="组件通信.html">
             
-                <span>
+                <a href="组件通信.html">
             
                     
                     组件通信
@@ -362,7 +362,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.9" data-path="组件的生命周期">
+        <li class="chapter " data-level="1.5.9" data-path="组件的生命周期.md">
             
                 <span>
             
@@ -540,6 +540,129 @@
     "> 
     &#x7EC4;&#x4EF6;&#x7684;&#x7EC4;&#x5408;&#x548C;&#x5D4C;&#x5957;
 </div>
+
+<h3 id="react-&#x5D4C;&#x5957;">React &#x5D4C;&#x5957;</h3>
+<div style="background: black;text-align: justify;padding: 10px 8px;letter-spacing: 2px;">
+    <font color="greenyellow" style="font-weight: bold;">  
+        &#x7EC4;&#x4EF6;&#x7684;&#x5D4C;&#x5957;&#x662F;&#x6307;: &#x5C06;&#x5B50;&#x7EC4;&#x4EF6;&#x5728;&#x7236;&#x7EC4;&#x4EF6;&#x7684;jsx&#x4E2D;&#x4EE5;&#x6807;&#x7B7E;&#x7684;&#x5F62;&#x5F0F;&#x4F7F;&#x7528;
+    </font>
+</div>
+
+<font color="red" style="font-weight:bold"> &#x7C7B;&#x7EC4;&#x4EF6;&#x5B9E;&#x73B0;&#x5D4C;&#x5957; </font>
+
+<pre><code class="lang-javascript">    <span class="hljs-comment">// &#x7236;&#x7EC4;&#x4EF6;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</span>
+    <span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Father</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span></span>{
+        render () {
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                {/* &#x6211;&#x4EEC;&#x53EA;&#x8981;&#x5728;&#x7236;&#x7EC4;&#x4EF6;&#x7684;jsx&#x7ED3;&#x6784;&#x4E2D;&#x4EE5;&#x6807;&#x7B7E;&#x7684;&#x5F62;&#x5F0F;&#x5199;&#x5165;&#x5B50;&#x7EC4;&#x4EF6;&#x5373;&#x53EF; */}
+                <span class="hljs-tag">&lt;<span class="hljs-name">Son</span>/&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+        }
+    }
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Son</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span></span>{
+        render () {
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span> &#x8FD9;&#x91CC;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;&#x5185;&#x5BB9; <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+        }
+    }
+</code></pre>
+<font color="red" style="font-weight:bold"> &#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x5B9E;&#x73B0;&#x5D4C;&#x5957; </font>
+
+
+<pre><code class="lang-javascript">    <span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+    <span class="hljs-keyword">const</span> Father = () =&gt; {
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                {/* &#x6211;&#x4EEC;&#x53EA;&#x8981;&#x5728;&#x7236;&#x7EC4;&#x4EF6;&#x7684;jsx&#x7ED3;&#x6784;&#x4E2D;&#x4EE5;&#x6807;&#x7B7E;&#x7684;&#x5F62;&#x5F0F;&#x5199;&#x5165;&#x5B50;&#x7EC4;&#x4EF6;&#x5373;&#x53EF; */}
+                <span class="hljs-tag">&lt;<span class="hljs-name">Son</span>/&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+        )
+    }
+    <span class="hljs-keyword">const</span> Son = () =&gt; {
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                &#x8FD9;&#x91CC;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;&#x5185;&#x5BB9;
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+        )
+    }
+</code></pre>
+<h3 id="react-&#x7EC4;&#x5408;">React &#x7EC4;&#x5408;</h3>
+<div style="background: black;text-align: justify;padding: 10px 8px;letter-spacing: 2px;">
+    <font color="greenyellow" style="font-weight: bold;">  
+        &#x7EC4;&#x4EF6;&#x7684;&#x7EC4;&#x5408;&#x662F;&#x6307;&#xFF1A;&#x5C06;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x5199;&#x5728;&#x53E6;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x5916;&#x5C42;&#x7EC4;&#x4EF6;&#x4E2D;&#x901A;&#x8FC7; this.props.children&#x6765;&#x63A5;&#x6536;&#x5185;&#x5BB9;&#x4E2D;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;
+        &#x6548;&#x679C;&#x4E0A;&#x7C7B;&#x4F3C;vue&#x4E2D;&#x7684;&#x63D2;&#x69FD;
+    </font>
+</div>
+
+<font color="red" style="font-weight:bold"> &#x7C7B;&#x7EC4;&#x4EF6;&#x5B9E;&#x73B0;&#x7EC4;&#x5408; </font>
+
+<pre><code class="lang-javascript">    <span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Title</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span></span>{
+        render (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span> &#x8FD9;&#x91CC;&#x662F;title <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+        )
+    }
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Content</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span></span>{
+        render (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span> &#x8FD9;&#x91CC;&#x662F;Content <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+        )
+    }
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Home</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span></span>{
+        render (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span> &#x8FD9;&#x91CC;&#x662F;home <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                {/* 2. &#x5728;Home&#x7EC4;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528; this.props.children&#x6765;&#x63A5;&#x6536; */}
+                { this.porps.children }
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+        )
+    }
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">App</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span></span>{
+        render () {
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Home</span>&gt;</span>
+                {/* 1. &#x5C06;&#x5B50;&#x7EC4;&#x4EF6;&#x653E;&#x5728;Home&#x7EC4;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x4E2D; */}
+                <span class="hljs-tag">&lt;<span class="hljs-name">Title</span>/&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">Content</span>/&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">Home</span>&gt;</span></span>
+        }
+    }
+</code></pre>
+<font color="red" style="font-weight:bold"> &#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x5B9E;&#x73B0;&#x7EC4;&#x5408; </font>
+
+<pre><code class="lang-javascript">    <span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+    <span class="hljs-keyword">const</span> Title = props =&gt; {
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span> &#x8FD9;&#x91CC;&#x662F;Title <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+        )
+    }
+    <span class="hljs-keyword">const</span> Content = props =&gt; {
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span> &#x8FD9;&#x91CC;&#x662F;Content <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+        )
+    }
+    <span class="hljs-keyword">const</span> Home = props =&gt; {
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span> &#x8FD9;&#x91CC;&#x662F;Home <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+            {<span class="hljs-comment">/* 2. &#x5728;Home&#x7EC4;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528; this.props.children&#x6765;&#x63A5;&#x6536; */</span>}
+            { <span class="hljs-keyword">this</span>.porps.children }
+        )
+    }
+    <span class="hljs-keyword">const</span> App = props =&gt; {
+        <span class="hljs-keyword">return</span> (
+            &lt;div&gt;
+                &lt;Home&gt;
+                    {/* 1. &#x6211;&#x4EEC;&#x5C06;&#x5B50;&#x7EC4;&#x4EF6;&#x653E;&#x5728;Home&#x7EC4;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x4E2D; */}
+                    &lt;Title/&gt;
+                    &lt;Content/&gt;
+                &lt;/Home&gt;
+            &lt;/div&gt;
+        )
+    }
+</code></pre>
+
                                 
                                 </section>
                             
@@ -582,7 +705,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"组件的组合&&嵌套","level":"1.5.3","depth":2,"next":{"title":"组件的样式","level":"1.5.4","depth":2,"path":"组件的样式.md","ref":"组件的样式.md","articles":[]},"previous":{"title":"React组件","level":"1.5.2","depth":2,"path":"React组件.md","ref":"React组件.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"组件组合&&嵌套.md","mtime":"2019-10-31T09:39:05.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-06T12:57:22.694Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"组件的组合&&嵌套","level":"1.5.3","depth":2,"next":{"title":"组件的样式","level":"1.5.4","depth":2,"path":"组件的样式.md","ref":"组件的样式.md","articles":[]},"previous":{"title":"React组件","level":"1.5.2","depth":2,"path":"React组件.md","ref":"React组件.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"组件组合&&嵌套.md","mtime":"2019-11-17T15:37:56.975Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-18T15:28:47.083Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

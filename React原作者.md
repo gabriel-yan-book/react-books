@@ -15,7 +15,7 @@
 </div>
 
 <div style = "display: flex;justify-content: center;margin-bottom: 40px;">
-    <img  src = "http://img2.imgtn.bdimg.com/it/u=1630882026,4102298106&fm=15&gp=0.jpg"/>
+    <img  src = "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1630882026,4102298106&fm=15&gp=0.jpg"/>
 </div>
 
 
