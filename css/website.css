@@ -1,0 +1,12 @@
+.gitbook-link{
+  display: none!important;
+}
+body{
+  background: red!important;
+}
+.markdown-section pre{
+  background: #fdf6e3!important;
+}
+.markdown-section ol ol{
+  list-style-type: upper-alpha!important;
+}

@@ -1,0 +1,1094 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>组件的生命周期 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="css/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="组件通信.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="电子书介绍.html">
+            
+                <a href="电子书介绍.html">
+            
+                    
+                    电子书概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    React介绍
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="React原作者.html">
+            
+                <a href="React原作者.html">
+            
+                    
+                    React原作者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="React开发者.html">
+            
+                <a href="React开发者.html">
+            
+                    
+                    React开发者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="React概述.html">
+            
+                <a href="React概述.html">
+            
+                    
+                    React概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="React特点.html">
+            
+                <a href="React特点.html">
+            
+                    
+                    React特点
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="React准备.html">
+            
+                <a href="React准备.html">
+            
+                    
+                    React准备
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="CRA.html">
+            
+                <a href="CRA.html">
+            
+                    
+                    CRA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="DVA.html">
+            
+                <a href="DVA.html">
+            
+                    
+                    DVA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="UMI.html">
+            
+                <a href="UMI.html">
+            
+                    
+                    UMI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    React基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="React元素.html">
+            
+                <a href="React元素.html">
+            
+                    
+                    React元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="React组件.html">
+            
+                <a href="React组件.html">
+            
+                    
+                    React组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="组件组合&&嵌套.html">
+            
+                <a href="组件组合&&嵌套.html">
+            
+                    
+                    组件的组合&&嵌套
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="组件的样式.html">
+            
+                <a href="组件的样式.html">
+            
+                    
+                    组件的样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="组件的数据形式.html">
+            
+                <a href="组件的数据形式.html">
+            
+                    
+                    组件的数据形式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="组件的数据渲染.html">
+            
+                <a href="组件的数据渲染.html">
+            
+                    
+                    组件的数据渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="组件的事件.html">
+            
+                <a href="组件的事件.html">
+            
+                    
+                    组件的事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="组件通信.html">
+            
+                <a href="组件通信.html">
+            
+                    
+                    组件通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.9" data-path="组件的生命周期.html">
+            
+                <a href="组件的生命周期.html">
+            
+                    
+                    组件的生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    React高级
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="高阶组件.md">
+            
+                <span>
+            
+                    
+                    高阶组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="React_Hooks.md">
+            
+                <span>
+            
+                    
+                    React Hooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="React路由.md">
+            
+                <span>
+            
+                    
+                    React路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="React状态管理.md">
+            
+                <span>
+            
+                    
+                    React状态管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    React应用
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="React组件库.md">
+            
+                <span>
+            
+                    
+                    React组件库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >组件的生命周期</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div style="
+        width: 100%;
+        height: 50px;
+        background: #00FFFF;
+        color: black;
+        line-height: 50px;
+        padding-left: 15px;
+        font-size: 24px;
+        font-weight: bold;
+    "> 
+  &#x7EC4;&#x4EF6;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;
+</div>
+
+<blockquote>
+<p>&#x76EE;&#x524D;React&#x7684;&#x7248;&#x672C;&#x4E3A;16.x&#x7248;&#x672C;&#xFF0C;&#x6B64;&#x6587;&#x7AE0;&#x4E3B;&#x8981;&#x9488;&#x5BF9;&#x7684;16.3&#x540E;&#x7248;&#x672C;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x8BF4;&#x660E;</p>
+</blockquote>
+<h3 id="1-&#x4E3A;&#x4EC0;&#x4E48;&#x6211;&#x4EEC;&#x8981;&#x5B66;&#x4E60;&#x7EC4;&#x4EF6;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x94A9;&#x5B50;&#x51FD;&#x6570;">1. &#x4E3A;&#x4EC0;&#x4E48;&#x6211;&#x4EEC;&#x8981;&#x5B66;&#x4E60;&#x7EC4;&#x4EF6;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x94A9;&#x5B50;&#x51FD;&#x6570;</h3>
+<div style="background: black;text-align: justify;padding: 10px 8px;letter-spacing: 2px;text-indent: 2em;">
+    <font color="greenyellow" style="font-weight: bold;">  
+        &#x751F;&#x547D;&#x5468;&#x671F;&#x94A9;&#x5B50;&#x51FD;&#x6570;&#x7684;&#x4F7F;&#x7528;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x66F4;&#x597D;&#x7684;&#x63A7;&#x5236;&#x548C;&#x7BA1;&#x7406;&#x7EC4;&#x4EF6;
+    </font>
+</div>
+
+<h3 id="2-react&#x751F;&#x547D;&#x5468;&#x671F;&#x9636;&#x6BB5;">2. React&#x751F;&#x547D;&#x5468;&#x671F;&#x9636;&#x6BB5;</h3>
+<blockquote>
+<p>&#x6211;&#x4EEC;&#x5C06;React&#x751F;&#x547D;&#x5468;&#x671F;&#x5206;&#x4E3A;&#x56DB;&#x4E2A;&#x9636;&#x6BB5;&#xFF0C;&#x5206;&#x522B;&#x5982;&#x4E0B;&#xFF1A;</p>
+</blockquote>
+<ol>
+<li>&#x6302;&#x8F7D;&#x9636;&#x6BB5;</li>
+<li>&#x66F4;&#x65B0;&#x9636;&#x6BB5;</li>
+<li>&#x5378;&#x8F7D;&#x9636;&#x6BB5;</li>
+<li>&#x9519;&#x8BEF;&#x5904;&#x7406;&#x9636;&#x6BB5;&#x3010; React16.3&#x7248;&#x672C;&#x4E4B;&#x540E;&#x65B0;&#x589E; &#x3011;</li>
+</ol>
+<h3 id="3-react&#x751F;&#x547D;&#x5468;&#x671F;&#x6CE8;&#x610F;&#x70B9;">3. React&#x751F;&#x547D;&#x5468;&#x671F;&#x6CE8;&#x610F;&#x70B9;</h3>
+<ol>
+<li><p>React16&#x5E9F;&#x5F03;&#x7684;&#x4E09;&#x4E2A;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;</p>
+<ul>
+<li>componentWillMount</li>
+<li>componentWillReceiveProps</li>
+<li>componentWillUpdate<blockquote>
+<p>&#x76EE;&#x524D;&#x5728;16&#x7248;&#x672C;&#x4E2D;componentWillMount&#xFF0C;componentWillReceiveProps&#xFF0C;componentWillUpdate&#x5E76;&#x672A;&#x5B8C;&#x5168;&#x5220;&#x9664;&#x8FD9;&#x4E09;&#x4E2A;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#xFF0C;&#x800C;&#x4E14;&#x65B0;&#x589E;&#x4E86;UNSAFE<em>componentWillMount&#xFF0C;UNSAFE_componentWillReceiveProps&#xFF0C;UNSAFE_componentWillUpdate&#x4E09;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x5B98;&#x65B9;&#x8BA1;&#x5212;&#x5728;17&#x7248;&#x672C;&#x5B8C;&#x5168;&#x5220;&#x9664;&#x8FD9;&#x4E09;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x53EA;&#x4FDD;&#x7559;UNSAVE</em>&#x524D;&#x7F00;&#x7684;&#x4E09;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x76EE;&#x7684;&#x662F;&#x4E3A;&#x4E86;&#x5411;&#x4E0B;&#x517C;&#x5BB9;&#xFF0C;&#x4F46;&#x662F;&#x5BF9;&#x4E8E;&#x5F00;&#x53D1;&#x8005;&#x800C;&#x8A00;&#x5E94;&#x8BE5;&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x4F7F;&#x7528;&#x4ED6;&#x4EEC;&#xFF0C;&#x800C;&#x662F;&#x4F7F;&#x7528;&#x65B0;&#x589E;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#x66FF;&#x4EE3;&#x5B83;&#x4EEC;</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>&#x53D6;&#x800C;&#x4EE3;&#x4E4B;&#x7684;&#x662F;&#x4E24;&#x4E2A;&#x65B0;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;</p>
+<ul>
+<li>static getDerivedStateFromProps</li>
+<li>getSnapshotBeforeUpdate</li>
+</ul>
+</li>
+</ol>
+<h3 id="3-react&#x751F;&#x547D;&#x5468;&#x671F;&#x56FE;&#x793A;">3. React&#x751F;&#x547D;&#x5468;&#x671F;&#x56FE;&#x793A;</h3>
+<p><img src="https://user-gold-cdn.xitu.io/2018/8/12/1652a030ed1506e0?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt=""></p>
+<h3 id="4-react&#x751F;&#x547D;&#x5468;&#x671F;&#x5404;&#x9636;&#x6BB5;&#x94A9;&#x5B50;&#x51FD;&#x6570;&#x89E3;&#x6790;">4. React&#x751F;&#x547D;&#x5468;&#x671F;&#x5404;&#x9636;&#x6BB5;&#x94A9;&#x5B50;&#x51FD;&#x6570;&#x89E3;&#x6790;</h3>
+<div style="
+        width: 100%;
+        height: 50px;
+        background: #00FFFF;
+        color: black;
+        line-height: 50px;
+        padding-left: 15px;
+        font-size: 24px;
+        font-weight: bold;
+    "> 
+  &#x521D;&#x59CB;&#x5316;&#x9636;&#x6BB5;
+</div>
+
+<blockquote>
+<p>&#x521D;&#x59CB;&#x5316;&#x9636;&#x6BB5;&#x5C31;&#x662F;&#x5C06;&#x6211;&#x4EEC;&#x7684;&#x7EC4;&#x4EF6;&#x63D2;&#x5165;&#x5230;DOM&#x4E2D;&#xFF0C;&#x53EA;&#x4F1A;&#x53D1;&#x751F;&#x4E00;&#x6B21;   </p>
+</blockquote>
+<ul>
+<li>&#x8FD9;&#x4E2A;&#x9636;&#x6BB5;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x5982;&#x4E0B;&#xFF1A;<ul>
+<li>constructor</li>
+<li>getDerivedStateFromProps</li>
+<li>componentWillMount/UNSAVE_componentWillMount</li>
+<li>render</li>
+<li>componentDidMount</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><p>constructor &#x6784;&#x9020;&#x5668;&#x51FD;&#x6570;</p>
+<ol>
+<li>&#x89E6;&#x53D1;&#x65F6;&#x95F4;&#xFF1A; React&#x7EC4;&#x4EF6;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x5728;&#x6302;&#x8F7D;&#x4E4B;&#x524D;&#x88AB;&#x8C03;&#x7528;</li>
+<li>&#x4F5C;&#x7528;&#xFF1A; <ul>
+<li>&#x8C03;&#x7528;super(props)&#xFF0C;&#x7528;&#x6765;&#x5C06;&#x7236;&#x7EC4;&#x4EF6;&#x4F20;&#x6765;&#x7684;props&#x7ED1;&#x5B9A;&#x5230;&#x8FD9;&#x4E2A;&#x7C7B;&#x4E2D;&#xFF0C;&#x4F7F;&#x7528;this.props&#x5C06;&#x4F1A;&#x5F97;&#x5230;</li>
+<li>&#x505A;&#x4E00;&#x4E9B;&#x521D;&#x59CB;&#x5316;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A; state&#x7684;&#x521D;&#x59CB;&#x5316;&#x3001;&#x975E;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x7684;&#x5B9E;&#x4F8B;&#x5C5E;&#x6027;&#x7684;this&#x7ED1;&#x5B9A;</li>
+</ul>
+</li>
+<li>&#x8BF4;&#x660E;<ul>
+<li><font color="red"> &#x7981;&#x6B62;&#x5728;constructor&#x4E2D;&#x8C03;&#x7528;setState,&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7ED9;state&#x8D4B;&#x521D;&#x59CB;&#x503C; </font></li>
+</ul>
+</li>
+<li><p>&#x4EE3;&#x7801;&#x6F14;&#x793A;</p>
+<pre><code class="lang-js"> <span class="hljs-keyword">import</span> React,{ Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+ <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Hello</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span></span>{
+   <span class="hljs-keyword">constructor</span> ( props ) {
+     <span class="hljs-keyword">super</span>( props ) <span class="hljs-comment">// &#x901A;&#x8FC7;&#x8C03;&#x7528;super&#x5C06;&#x7236;&#x7EC4;&#x4EF6;&#x7ED1;&#x5B9A;&#x5728;&#x5F53;&#x524D;&#x7EC4;&#x4EF6;&#x8EAB;&#x4E0A;&#x7684;&#x5C5E;&#x6027;&#x8D4B;&#x503C;&#x7ED9;this.props </span>
+     <span class="hljs-keyword">this</span>.state = { <span class="hljs-comment">// &#x505A;state&#x7684;&#x521D;&#x59CB;&#x5316;</span>
+       count: <span class="hljs-number">0</span>
+     }
+     <span class="hljs-keyword">this</span>.change = <span class="hljs-keyword">this</span>.change.bind( <span class="hljs-keyword">this</span> ) <span class="hljs-comment">// &#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;this&#x7684;&#x6307;&#x5411;&#x4FEE;&#x6539;</span>
+   }
+
+   change () {
+     <span class="hljs-comment">// &#x5982;&#x679C;&#x4E0D;&#x8FDB;&#x884C;bind&#x7684;&#x7ED1;&#x5B9A;&#xFF0C;&#x90A3;&#x4E48;&#x8BE5;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#x7684;this&#x503C;&#x4E3A;undefined</span>
+     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;this&#x7684;&#x503C;&#x4E3A;&#xFF1A;&apos;</span>,<span class="hljs-keyword">this</span> )
+   }
+
+   render () {
+     <span class="hljs-keyword">return</span> (
+       <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+
+       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+     )
+   }
+ }
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>getDerivedStateFromProps</p>
+<ol>
+<li>&#x8C03;&#x7528;&#x65F6;&#x95F4;&#xFF1A; &#x8BE5;&#x51FD;&#x6570;&#x4F1A;&#x5728;&#x6302;&#x8F7D;&#x65F6;&#xFF0C;&#x63A5;&#x6536;&#x5230;&#x65B0;&#x7684;props&#xFF0C;&#x8C03;&#x7528;&#x4E86;setState&#x548C;forceUpdate&#x65F6;&#x88AB;&#x8C03;&#x7528;</li>
+<li>&#x4F5C;&#x7528;&#xFF1A; <ul>
+<li>&#x4E00;&#x4E2A;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x80FD;&#x5728;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x91CC;&#x9762;&#x4F7F;&#x7528;this&#xFF0C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x6709;&#x4E24;&#x4E2A;&#x53C2;&#x6570;props&#x548C;state&#xFF0C;&#x5206;&#x522B;&#x6307;&#x63A5;&#x6536;&#x5230;&#x7684;&#x65B0;&#x53C2;&#x6570;&#x548C;&#x5F53;&#x524D;&#x7684;state&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7528;&#x6765;&#x66F4;&#x65B0;&#x5F53;&#x524D;&#x7684;state&#x5BF9;&#x8C61;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;null</li>
+</ul>
+</li>
+<li>&#x4EE3;&#x7801;&#x6F14;&#x793A;<pre><code class="lang-js">  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ExampleComponent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+    state = {
+      isScrollingDown: <span class="hljs-literal">false</span>,
+      lastRow: <span class="hljs-literal">null</span>
+    }
+    <span class="hljs-keyword">static</span> getDerivedStateFromProps(nextProps, prevState) {
+      <span class="hljs-keyword">if</span> (nextProps.currentRow !== prevState.lastRow) {
+          <span class="hljs-keyword">return</span> {
+              isScrollingDown:
+              nextProps.currentRow &gt; prevState.lastRow,
+              lastRow: nextProps.currentRow
+          }
+      }
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>
+    }
+  }
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>componentWillMount OR  UNSAFE_componentWillMount</p>
+<p>&#x5728;16&#x7248;&#x672C;&#x8FD9;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x5E76;&#x5B58;&#xFF0C;&#x4F46;&#x662F;&#x5728;17&#x7248;&#x672C;&#x4E2D;componentWillMount&#x88AB;&#x5220;&#x9664;&#xFF0C;&#x53EA;&#x4FDD;&#x7559;UNSAFE_componentWillMount&#xFF0C;&#x76EE;&#x7684;&#x662F;&#x4E3A;&#x4E86;&#x505A;&#x5411;&#x4E0B;&#x517C;&#x5BB9;&#xFF0C;&#x5BF9;&#x4E8E;&#x65B0;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x7528;getDerivedStateFromProps&#x4EE3;&#x66FF;&#x5B83;&#x4EEC;&#x7531;&#x4E8E;componentWillMount/ UNSAFE_componentWillMount&#x662F;&#x5728;render&#x4E4B;&#x524D;&#x8C03;&#x7528;&#xFF0C;&#x6240;&#x4EE5;&#x5C31;&#x7B97;&#x5728;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E2D;&#x8C03;&#x7528;setState&#x4E5F;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#xFF08;re-render&#xFF09;</p>
+</li>
+<li><p>render &#x51FD;&#x6570;</p>
+<blockquote>
+<p>React&#x4E2D;&#x6700;&#x6838;&#x5FC3;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E2D;&#x5FC5;&#x987B;&#x8981;&#x6709;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;</p>
+</blockquote>
+<ol>
+<li>&#x89E6;&#x53D1;&#x65F6;&#x95F4;&#xFF1A;&#x521D;&#x59CB;&#x5316;&#x9636;&#x6BB5;&#x548C;&#x66F4;&#x65B0;&#x9636;&#x6BB5;&#x90FD;&#x4F1A;&#x89E6;&#x53D1;</li>
+<li>&#x4F5C;&#x7528;&#xFF1A; <ul>
+<li>&#x8FD4;&#x56DE;&#x9700;&#x8981;&#x6E32;&#x67D3;&#x7684;vdom</li>
+<li>&#x8FDB;&#x884C;this.props &amp;&amp; this.state &#x7684;&#x8BA1;&#x7B97;</li>
+</ul>
+</li>
+<li>&#x8BF4;&#x660E;<ul>
+<li>render&#x51FD;&#x6570;&#x5F0F;&#x5FC5;&#x987B;&#x8981;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#xFF0C;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x53EF;&#x4EE5;&#x4E3A;&#xFF1A;<ul>
+<li>React&#x5143;&#x7D20;</li>
+<li>React&#x7EC4;&#x4EF6;</li>
+<li>Fragment( &#x7247;&#x6BB5; )</li>
+<li>Portals&#x3010; &#x63D2;&#x69FD; &#x3011;</li>
+<li>&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x662F;&#x6570;&#x7EC4;&#xFF0C;&#x88AB;&#x6E32;&#x67D3;&#x6210;text&#x8282;&#x70B9;</li>
+<li>Boolean&#x548C;null,&#x4E0D;&#x4F1A;&#x6E32;&#x67D3;&#x4EFB;&#x4F55;&#x4E1C;&#x897F;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x4EE3;&#x7801;&#x6F14;&#x793A;<pre><code class="lang-js"> <span class="hljs-keyword">import</span> React,{ Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+ <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Hello</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span></span>{
+   <span class="hljs-keyword">constructor</span> ( props ) {
+     <span class="hljs-keyword">super</span>( props )
+     <span class="hljs-keyword">this</span>.state = {
+       msg: <span class="hljs-string">&apos;Hello &#x897F;&#x9601;&apos;</span>
+     }
+   }
+   render () {
+     <span class="hljs-keyword">const</span> { msg } = <span class="hljs-keyword">this</span>.state 
+     <span class="hljs-keyword">return</span> (
+       <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+          { msg }
+       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+     )
+   }
+ }
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>componentDidMount </p>
+<ol>
+<li>&#x8C03;&#x7528;&#x65F6;&#x95F4;&#xFF1A; &#x7EC4;&#x4EF6;&#x6302;&#x8F7D;&#x7ED3;&#x675F;&#x4E4B;&#x540E;&#x8C03;&#x7528;</li>
+<li>&#x4F5C;&#x7528;<ul>
+<li>&#x53EF;&#x4EE5;&#x505A;&#x6570;&#x636E;&#x8BF7;&#x6C42;&#xFF0C;&#x5E76;&#x5C06;&#x8BF7;&#x6C42;&#x4E4B;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x8D4B;&#x503C;&#x7ED9;&#x7EC4;&#x4EF6;&#x7684;state</li>
+<li>&#x53EF;&#x4EE5;&#x8FDB;&#x884C;DOM&#x64CD;&#x4F5C;</li>
+<li>&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;&#x7684;&#x5B9E;&#x4F8B;&#x5316;</li>
+</ul>
+</li>
+<li><p>&#x4EE3;&#x7801;&#x6F14;&#x793A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Hello</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span></span>{
+  <span class="hljs-keyword">constructor</span> ( props ) {
+    <span class="hljs-keyword">super</span>( props )
+    <span class="hljs-keyword">this</span>.state = {
+      data: <span class="hljs-literal">null</span> 
+    }
+  }
+
+  componentDidMount () {
+    <span class="hljs-comment">// &#x8FDB;&#x884C;&#x6570;&#x636E;&#x8BF7;&#x6C42;&#xFF0C;&#x7136;&#x540E;&#x8D4B;&#x503C;&#x7ED9;state</span>
+    fetch(<span class="hljs-string">&apos;http://jsonplaceholder.typicode.com/albums&apos;</span>)
+      .then( data =&gt; data.json() )
+      .then( res =&gt; {
+        <span class="hljs-keyword">this</span>.setState({
+          data: res
+        })
+      })
+      .catch( err =&gt; <span class="hljs-built_in">console</span>.log( err ))
+  }
+
+  render () {
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+  }
+}
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+<div style="
+        width: 100%;
+        height: 50px;
+        background: #00FFFF;
+        color: black;
+        line-height: 50px;
+        padding-left: 15px;
+        font-size: 24px;
+        font-weight: bold;
+    "> 
+  &#x66F4;&#x65B0;&#x9636;&#x6BB5;
+</div>
+
+<blockquote>
+<p>&#x66F4;&#x65B0;&#x9636;&#x6BB5;&#xFF0C;&#x5F53;&#x7EC4;&#x4EF6;&#x7684;props&#x6539;&#x53D8;&#x4E86;&#xFF0C;&#x6216;&#x7EC4;&#x4EF6;&#x5185;&#x90E8;&#x8C03;&#x7528;&#x4E86;setState&#x6216;&#x8005;forceUpdate&#x53D1;&#x751F;&#xFF0C;&#x4F1A;&#x53D1;&#x751F;&#x591A;&#x6B21;</p>
+</blockquote>
+<font color="red">&#x8FD9;&#x4E2A;&#x9636;&#x6BB5;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x5982;&#x4E0B;&#xFF1A; </font>
+
+<ul>
+<li>componentWillReceiveProps/UNSAFE_componentWillReceiveProps</li>
+<li>getDerivedStateFromProps</li>
+<li>shouldComponentUpdate</li>
+<li>componentWillUpdate/UNSAFE_componentWillUpdate</li>
+<li>render</li>
+<li>getSnapshotBeforeUpdate</li>
+<li>componentDidUpdate</li>
+</ul>
+<ol>
+<li><p>componentWillReceiveProps/UNSAFE_componentWillReceiveProps</p>
+<blockquote>
+<p>&#x5728;16&#x7248;&#x672C;&#x8FD9;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x5E76;&#x5B58;&#xFF0C;&#x4F46;&#x662F;&#x5728;17&#x7248;&#x672C;&#x4E2D;componentWillReceiveProps&#x88AB;&#x5220;&#x9664;&#xFF0C;UNSAFE_componentWillReceiveProps&#xFF0C;&#x76EE;&#x7684;&#x662F;&#x4E3A;&#x4E86;&#x505A;&#x5411;&#x4E0B;&#x517C;&#x5BB9;&#xFF0C;&#x5BF9;&#x4E8E;&#x65B0;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x7528;getDerivedStateFromProps&#x4EE3;&#x66FF;&#x5B83;&#x4EEC;</p>
+<ol>
+<li>&#x89E6;&#x53D1;&#x6761;&#x4EF6;&#xFF1A; &#x7EC4;&#x4EF6;&#x7684;props&#x53D1;&#x751F;&#x6539;&#x53D8;&#x65F6;&#x89E6;&#x53D1;</li>
+<li>&#x4F5C;&#x7528;<ul>
+<li>&#x7528;&#x4E8E;&#x63A5;&#x6536;&#x65B0;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x7136;&#x540E;&#x505A;&#x4E00;&#x4E9B;props&#x6539;&#x53D8;&#x7684;&#x76D1;&#x542C;</li>
+</ul>
+</li>
+<li>&#x4EE3;&#x7801;&#x6F14;&#x793A;<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Hello</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span></span>{
+  componentWillReceiveProps( nextProps ) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;nextProps&apos;</span>,nextProps) <span class="hljs-comment">//&#x7528;&#x4E8E;&#x63A5;&#x6536;&#x53D8;&#x5316;&#x540E;&#x7684;&#x65B0;&#x7684;&#x5C5E;&#x6027;</span>
+  }
+  render () {
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+  }
+}
+</code></pre>
+</li>
+</ol>
+</blockquote>
+</li>
+<li><p>getDerivedStateFromProps</p>
+<blockquote>
+<p>&#x521D;&#x59CB;&#x5316;&#x9636;&#x6BB5;&#x5DF2;&#x7ECF;&#x89E3;&#x91CA;&#x8FC7;&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x4E0D;&#x5728;&#x591A;&#x89E3;&#x91CA;</p>
+</blockquote>
+</li>
+<li><p>shouldComponentUpdate( nextProps,nextState )</p>
+<ol>
+<li>&#x6709;&#x4E24;&#x4E2A;&#x53C2;&#x6570;nextProps&#x548C;nextState&#xFF0C;&#x8868;&#x793A;&#x65B0;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x53D8;&#x5316;&#x4E4B;&#x540E;&#x7684;state&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x503C;&#xFF0C;true&#x8868;&#x793A;&#x4F1A;&#x89E6;&#x53D1;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#xFF0C;false&#x8868;&#x793A;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#xFF0C;&#x9ED8;&#x8BA4;&#x8FD4;&#x56DE;true</li>
+<li>&#x56E0;&#x4E3A;&#x9ED8;&#x8BA4;&#x662F;&#x8FD4;&#x56DE;true&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x53EA;&#x8981;&#x63A5;&#x6536;&#x5230;&#x65B0;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x8C03;&#x7528;&#x4E86;setState&#x90FD;&#x4F1A;&#x89E6;&#x53D1;&#x91CD;&#x65B0;&#x7684;&#x6E32;&#x67D3;&#xFF0C;&#x8FD9;&#x4F1A;&#x5E26;&#x6765;&#x4E00;&#x5B9A;&#x7684;&#x6027;&#x80FD;&#x95EE;&#x9898;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C06;this.props&#x4E0E;nextProps&#x4EE5;&#x53CA;this.state&#x4E0E;nextState&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#x6765;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x8FD4;&#x56DE;false&#xFF0C;&#x6765;&#x51CF;&#x5C11;&#x91CD;&#x65B0;&#x6E32;&#x67D3;</li>
+<li>&#x6CE8;&#x610F;<ul>
+<li><font color="red">&#x4F46;&#x662F;&#x5B98;&#x65B9;&#x63D0;&#x5021;&#x6211;&#x4EEC;&#x4F7F;&#x7528;PureComponent&#x6765;&#x51CF;&#x5C11;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x7684;&#x6B21;&#x6570;&#x800C;&#x4E0D;&#x662F;&#x624B;&#x5DE5;&#x7F16;&#x5199;shouldComponentUpdate&#x4EE3;&#x7801;</font></li>
+</ul>
+</li>
+<li>&#x4EE3;&#x7801;&#x6F14;&#x793A;<pre><code class="lang-js">  <span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Hello</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span></span>{
+    shouldComponentUpdate ( nextProps,nextState ) {
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.props.xxx == nextProps.xxx
+    }
+    render () {
+      <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+      )
+    }
+  }
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>componentWillUpdate/UNSAFE_componentWillUpdate</p>
+<ul>
+<li>&#x5728;16&#x7248;&#x672C;&#x8FD9;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x5E76;&#x5B58;&#xFF0C;&#x4F46;&#x662F;&#x5728;17&#x7248;&#x672C;&#x4E2D;componentWillUpdate&#x88AB;&#x5220;&#x9664;&#xFF0C;UNSAFE_componentWillUpdate&#xFF0C;&#x76EE;&#x7684;&#x662F;&#x4E3A;&#x4E86;&#x505A;&#x5411;&#x4E0B;&#x517C;&#x5BB9;
+&#x5728;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x91CC;&#xFF0C;&#x4F60;&#x4E0D;&#x80FD;&#x8C03;&#x7528;setState&#xFF0C;&#x56E0;&#x4E3A;&#x80FD;&#x8D70;&#x5230;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x8BF4;&#x660E;shouldComponentUpdate&#x8FD4;&#x56DE;true&#xFF0C;&#x6B64;&#x65F6;&#x4E0B;&#x4E00;&#x4E2A;state&#x72B6;&#x6001;&#x5DF2;&#x7ECF;&#x88AB;&#x786E;&#x5B9A;&#xFF0C;&#x9A6C;&#x4E0A;&#x5C31;&#x8981;&#x6267;&#x884C;render&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x4E86;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x5BFC;&#x81F4;&#x6574;&#x4E2A;&#x751F;&#x547D;&#x5468;&#x671F;&#x6DF7;&#x4E71;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x4E5F;&#x4E0D;&#x80FD;&#x8BF7;&#x6C42;&#x4E00;&#x4E9B;&#x7F51;&#x7EDC;&#x6570;&#x636E;&#xFF0C;&#x56E0;&#x4E3A;&#x5728;&#x5F02;&#x6B65;&#x6E32;&#x67D3;&#x4E2D;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x591A;&#x6B21;&#xFF0C;&#x5F15;&#x8D77;&#x4E00;&#x4E9B;&#x6027;&#x80FD;&#x95EE;&#x9898;&#xFF0C;</li>
+<li>&#x5982;&#x679C;&#x4F60;&#x5728;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x91CC;&#x4FDD;&#x5B58;&#x4E86;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;&#xFF0C;&#x4E5F;&#x662F;&#x4E0D;&#x51C6;&#x786E;&#x7684;&#xFF0C;&#x8FD8;&#x662F;&#x56E0;&#x4E3A;&#x5F02;&#x6B65;&#x6E32;&#x67D3;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x975E;&#x8981;&#x83B7;&#x53D6;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;&#x7684;&#x8BDD;&#xFF0C;&#x8BF7;&#x5728;getSnapshotBeforeUpdate&#x8C03;&#x7528;</li>
+</ul>
+</li>
+<li><p>render </p>
+<blockquote>
+<p>&#x66F4;&#x65B0;&#x9636;&#x6BB5;&#x4E5F;&#x4F1A;&#x518D;&#x6B21;&#x51FA;&#x53D1;</p>
+</blockquote>
+</li>
+<li><p>getSnapshotBeforeUpdate(prevProps, prevState)</p>
+<ol>
+<li>&#x8C03;&#x7528;&#x65F6;&#x95F4;&#xFF1A; render&#x7ED3;&#x675F;&#x4E4B;&#x540E;&#xFF0C;componentDidUpdate&#x8C03;&#x7528;&#x4E4B;&#x524D;</li>
+<li>&#x4F5C;&#x7528;<ul>
+<li>&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x6709;&#x4E00;&#x4E2A;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x4F1A;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7ED9;componentDidUpdate</li>
+</ul>
+</li>
+<li>&#x6CE8;&#x610F;<ul>
+<li><font color="red"> &#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E00;&#x5B9A;&#x8981;&#x548C;componentDidUpdate&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#xFF0C;&#x5426;&#x5219;&#x63A7;&#x5236;&#x53F0;&#x4E5F;&#x4F1A;&#x6709;&#x8B66;&#x544A; </font></li>
+</ul>
+</li>
+<li>&#x4EE3;&#x7801;&#x6F14;&#x793A;<pre><code class="lang-js">  <span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Hello</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span></span>{
+    render () {
+      <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+      )
+    }
+    getSnapshotBeforeUpdte (prevProps, prevState) {
+      <span class="hljs-keyword">return</span> <span class="hljs-built_in">document</span>.documentElement.scrollTop
+    }
+    componentDidUpdate(prevProps, prevState, snapshot) {
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;&#x897F;&#x9601;: Hello -&gt; componentDidUpdate -&gt; snapshot&quot;</span>, snapshot)
+    }
+  }
+</code></pre>
+</li>
+</ol>
+</li>
+<li>componentDidUpdate(prevProps, prevState, snapshot)<ol>
+<li>&#x8C03;&#x7528;&#x65F6;&#x95F4;&#xFF1A; getSnapshotBeforeUpdter&#x8C03;&#x7528;&#x4E4B;&#x540E;</li>
+<li>&#x4F5C;&#x7528;<ul>
+<li>&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;snapshot&#x53C2;&#x6570;&#x6765;&#x63A5;&#x6536;getSnapshotVeforeUpdater&#x7684;&#x8FD4;&#x56DE;&#x503C;</li>
+<li>&#x8FDB;&#x884C;DOM&#x64CD;&#x4F5C;</li>
+<li>&#x53D1;&#x8D77;&#x670D;&#x52A1;&#x5668;&#x8BF7;&#x6C42;</li>
+<li>&#x8FDB;&#x884C;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;&#x5B9E;&#x4F8B;&#x5316;</li>
+</ul>
+</li>
+<li>&#x6CE8;&#x610F;<ul>
+<li><font color="red"> &#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x8FD8;&#x53EF;&#x4EE5;setState&#xFF0C;&#x4F46;&#x662F;&#x6CE8;&#x610F;&#x4E00;&#x5B9A;&#x8981;&#x7528;if&#x8BED;&#x53E5;&#x63A7;&#x5236;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x5BFC;&#x81F4;&#x65E0;&#x9650;&#x5FAA;&#x73AF; </font></li>
+</ul>
+</li>
+<li>&#x4EE3;&#x7801;&#x6F14;&#x793A;<pre><code class="lang-js">  <span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Hello</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span></span>{
+    render () {
+      <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+      )
+    }
+    getSnapshotBeforeUpdte (prevProps, prevState) {
+      <span class="hljs-keyword">return</span> <span class="hljs-built_in">document</span>.documentElement.scrollTop
+    }
+    componentDidUpdate(prevProps, prevState, snapshot) {
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;&#x897F;&#x9601;: Hello -&gt; componentDidUpdate -&gt; snapshot&quot;</span>, snapshot)
+    }
+  }
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+<div style="
+        width: 100%;
+        height: 50px;
+        background: #00FFFF;
+        color: black;
+        line-height: 50px;
+        padding-left: 15px;
+        font-size: 24px;
+        font-weight: bold;
+    "> 
+  &#x5378;&#x8F7D;&#x9636;&#x6BB5;
+</div>
+
+<ol>
+<li>&#x89E6;&#x53D1;&#x65F6;&#x95F4;&#xFF1A; &#x5F53;&#x6211;&#x4EEC;&#x7684;&#x7EC4;&#x4EF6;&#x88AB;&#x5378;&#x8F7D;&#x6216;&#x8005;&#x9500;&#x6BC1;&#x4E86;&#x5C31;&#x4F1A;&#x8C03;&#x7528;&#xFF0C;</li>
+<li>&#x4F5C;&#x7528;&#xFF1A;<ul>
+<li>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x91CC;&#x53BB;&#x6E05;&#x9664;&#x4E00;&#x4E9B;&#x5B9A;&#x65F6;&#x5668;&#xFF0C;&#x53D6;&#x6D88;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#xFF0C;&#x6E05;&#x7406;&#x65E0;&#x6548;&#x7684;DOM&#x5143;&#x7D20;&#x7B49;&#x5783;&#x573E;&#x6E05;&#x7406;&#x5DE5;&#x4F5C;</li>
+</ul>
+</li>
+<li>&#x4EE3;&#x7801;&#x6F14;&#x793A;<pre><code class="lang-js"> <span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+ <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Hello</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span></span>{
+   render () {
+     <span class="hljs-keyword">return</span> (
+       <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+     )
+   }
+   componentWillUnmount () {
+     clearInterval( <span class="hljs-keyword">this</span>.timer )
+     <span class="hljs-built_in">window</span>.onscroll = <span class="hljs-literal">null</span> 
+   }
+ }
+</code></pre>
+</li>
+</ol>
+<div style="
+        width: 100%;
+        height: 50px;
+        background: #00FFFF;
+        color: black;
+        line-height: 50px;
+        padding-left: 15px;
+        font-size: 24px;
+        font-weight: bold;
+    "> 
+  &#x9519;&#x8BEF;&#x5904;&#x7406;&#x9636;&#x6BB5;
+</div>
+
+<ol>
+<li><p>componentDidCatch(error, info)</p>
+<ol>
+<li>&#x8C03;&#x7528;&#xFF1A; &#x6B64;&#x751F;&#x547D;&#x5468;&#x671F;&#x5728;&#x540E;&#x4EE3;&#x7EC4;&#x4EF6;&#x629B;&#x51FA;&#x9519;&#x8BEF;&#x540E;&#x88AB;&#x8C03;&#x7528;&#x3002; &#x5B83;&#x63A5;&#x6536;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;<ul>
+<li>error &#x2014;&#x2014; &#x629B;&#x51FA;&#x7684;&#x9519;&#x8BEF;&#x3002;</li>
+<li>info &#x2014;&#x2014; &#x5E26;&#x6709; componentStack key &#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x6709;&#x5173;&#x7EC4;&#x4EF6;&#x5F15;&#x53D1;&#x9519;&#x8BEF;&#x7684;&#x6808;&#x4FE1;&#x606F;&#x3002;</li>
+</ul>
+</li>
+<li>&#x4F5C;&#x7528;&#xFF1A;<ul>
+<li>componentDidCatch() &#x4F1A;&#x5728;&#x201C;&#x63D0;&#x4EA4;&#x201D;&#x9636;&#x6BB5;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x56E0;&#x6B64;&#x5141;&#x8BB8;&#x6267;&#x884C;&#x526F;&#x4F5C;&#x7528;&#x3002; &#x5B83;&#x5E94;&#x8BE5;&#x7528;&#x4E8E;&#x8BB0;&#x5F55;&#x9519;&#x8BEF;&#x4E4B;&#x7C7B;&#x7684;&#x60C5;&#x51B5;&#xFF1A;</li>
+<li>&#x9519;&#x8BEF;&#x8FB9;&#x754C;&#x662F;React&#x7EC4;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x5176;&#x5B50;&#x7EC4;&#x4EF6;&#x6811;&#x4E2D;&#x7684;&#x4EFB;&#x4F55;&#x4F4D;&#x7F6E;&#x6355;&#x83B7;JavaScript&#x9519;&#x8BEF;&#xFF0C;&#x8BB0;&#x5F55;&#x8FD9;&#x4E9B;&#x9519;&#x8BEF;&#x5E76;&#x663E;&#x793A;&#x56DE;&#x9000;UI&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5D29;&#x6E83;&#x7684;&#x7EC4;&#x4EF6;&#x6811;&#x3002;&#x9519;&#x8BEF;&#x8FB9;&#x754C;&#x5728;&#x6E32;&#x67D3;&#x671F;&#x95F4;&#xFF0C;&#x751F;&#x547D;&#x5468;&#x671F;&#x65B9;&#x6CD5;&#x4EE5;&#x53CA;&#x6574;&#x4E2A;&#x6811;&#x4E0B;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4E2D;&#x6355;&#x83B7;&#x9519;&#x8BEF; </li>
+</ul>
+</li>
+<li>&#x4EE3;&#x7801;&#x6F14;&#x793A;</li>
+</ol>
+<pre><code class="lang-js"> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ErrorBoundary</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+   <span class="hljs-keyword">constructor</span>(props) {
+     <span class="hljs-keyword">super</span>(props);
+     <span class="hljs-keyword">this</span>.state = { hasError: <span class="hljs-literal">false</span> };
+   }
+
+   <span class="hljs-keyword">static</span> getDerivedStateFromError(error) {
+     <span class="hljs-comment">// &#x66F4;&#x65B0; state &#x4F7F;&#x4E0B;&#x4E00;&#x6B21;&#x6E32;&#x67D3;&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x964D;&#x7EA7; UI</span>
+     <span class="hljs-keyword">return</span> { hasError: <span class="hljs-literal">true</span> };
+   }
+
+   componentDidCatch(error, info) {
+     <span class="hljs-comment">// &quot;&#x7EC4;&#x4EF6;&#x5806;&#x6808;&quot; &#x4F8B;&#x5B50;:</span>
+     <span class="hljs-comment">//   in ComponentThatThrows (created by App)</span>
+     <span class="hljs-comment">//   in ErrorBoundary (created by App)</span>
+     <span class="hljs-comment">//   in div (created by App)</span>
+     <span class="hljs-comment">//   in App</span>
+     logComponentStackToMyService(info.componentStack);
+   }
+
+   render() {
+     <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.state.hasError) {
+       <span class="hljs-comment">// &#x4F60;&#x53EF;&#x4EE5;&#x6E32;&#x67D3;&#x4EFB;&#x4F55;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x964D;&#x7EA7; UI</span>
+       <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Something went wrong.<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>;
+     }
+
+     <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.props.children; 
+   }
+ }
+</code></pre>
+</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="组件通信.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 组件通信">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"组件的生命周期","level":"1.5.9","depth":2,"next":{"title":"React高级","level":"1.6","depth":1,"ref":"","articles":[{"title":"高阶组件","level":"1.6.1","depth":2,"path":"高阶组件.md","ref":"高阶组件.md","articles":[]},{"title":"React Hooks","level":"1.6.2","depth":2,"path":"React_Hooks.md","ref":"React_Hooks.md","articles":[]},{"title":"React路由","level":"1.6.3","depth":2,"path":"React路由.md","ref":"React路由.md","articles":[]},{"title":"React状态管理","level":"1.6.4","depth":2,"path":"React状态管理.md","ref":"React状态管理.md","articles":[]}]},"previous":{"title":"组件通信","level":"1.5.8","depth":2,"path":"组件通信.md","ref":"组件通信.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"css/website.css"}},"file":{"path":"组件的生命周期.md","mtime":"2019-11-19T16:38:01.539Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-19T16:37:10.448Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
