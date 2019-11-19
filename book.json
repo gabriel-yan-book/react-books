@@ -1,0 +1,8 @@
+{
+  "plugins": [
+      "expandable-chapters"
+  ],
+  "styles": {
+      "website": "css/website.css"
+  }
+}
