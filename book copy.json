@@ -1,0 +1,14 @@
+{
+  "plugins": [
+      "expandable-chapters"
+  ],
+  "styles": {
+      "website": "css/website.css"
+  },
+  "author": "闫亚兵",
+  "links" : {
+    "sidebar" : {
+        "请关注我" : "https://github.com/search?q=yanyabing1&type=Users"
+    }
+  }
+}

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>组件的样式 · GitBook</title>
+        <title>React Hooks · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -53,10 +53,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="组件的数据形式.html" />
+    <link rel="next" href="React路由.html" />
     
     
-    <link rel="prev" href="组件组合&&嵌套.html" />
+    <link rel="prev" href="高阶组件.html" />
     
 
     </head>
@@ -302,7 +302,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.4" data-path="组件的样式.html">
+        <li class="chapter " data-level="1.5.4" data-path="组件的样式.html">
             
                 <a href="组件的样式.html">
             
@@ -425,7 +425,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="React Hooks.html">
+        <li class="chapter active" data-level="1.6.2" data-path="React Hooks.html">
             
                 <a href="React Hooks.html">
             
@@ -531,7 +531,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >组件的样式</a>
+        <a href="." >React Hooks</a>
     </h1>
 </div>
 
@@ -556,104 +556,173 @@
         font-size: 24px;
         font-weight: bold;
     "> 
-    &#x7EC4;&#x4EF6;&#x7684;&#x6837;&#x5F0F;
+    React Hooks
 </div>
 
+<h3 id="1-react-hooks-&#x662F;&#x4EC0;&#x4E48;&#xFF1F;">1. React Hooks &#x662F;&#x4EC0;&#x4E48;&#xFF1F;</h3>
+<div style="background: black;text-align: justify;padding: 10px 8px;letter-spacing: 2px;">
+    <font color="greenyellow" style="font-weight: bold;">  
+       Hook &#x662F; React 16.8 &#x7684;&#x65B0;&#x589E;&#x7279;&#x6027;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x5728;&#x4E0D;&#x7F16;&#x5199; class &#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x4F7F;&#x7528; state &#x4EE5;&#x53CA;&#x5176;&#x4ED6;&#x7684; React &#x7279;&#x6027;
+    </font>
+</div>
+
+<h3 id="2-react-hooks&#x7279;&#x70B9;">2. React Hooks&#x7279;&#x70B9;</h3>
+<ol>
+<li>&#x5B8C;&#x5168;&#x53EF;&#x9009;&#xFF1A;  &#x4F60;&#x65E0;&#x9700;&#x91CD;&#x5199;&#x4EFB;&#x4F55;&#x5DF2;&#x6709;&#x4EE3;&#x7801;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x4E00;&#x4E9B;&#x7EC4;&#x4EF6;&#x4E2D;&#x5C1D;&#x8BD5; Hook&#x3002;&#x4F46;&#x662F;&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x60F3;&#xFF0C;&#x4F60;&#x4E0D;&#x5FC5;&#x73B0;&#x5728;&#x5C31;&#x53BB;&#x5B66;&#x4E60;&#x6216;&#x4F7F;&#x7528; Hook&#x3002;</li>
+<li>100% &#x5411;&#x540E;&#x517C;&#x5BB9;&#x7684;&#x3002; Hook &#x4E0D;&#x5305;&#x542B;&#x4EFB;&#x4F55;&#x7834;&#x574F;&#x6027;&#x6539;&#x52A8;&#x3002;</li>
+<li>&#x73B0;&#x5728;&#x53EF;&#x7528;&#x3002; Hook &#x5DF2;&#x53D1;&#x5E03;&#x4E8E; v16.8.0&#x3002;</li>
+<li>&#x6CA1;&#x6709;&#x8BA1;&#x5212;&#x4ECE; React &#x4E2D;&#x79FB;&#x9664; class</li>
+<li>Hook &#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x4F60;&#x5BF9; React &#x6982;&#x5FF5;&#x7684;&#x7406;&#x89E3;</li>
+</ol>
+<h3 id="3-react-hooks&#x4F5C;&#x7528;-&#x3010;-&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x4F7F;&#x7528;hooks-&#x3011;">3. React Hooks&#x4F5C;&#x7528; &#x3010; &#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x4F7F;&#x7528;Hooks &#x3011;</h3>
+<ol>
+<li>&#x89E3;&#x51B3;&#x5728;&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x590D;&#x7528;&#x72B6;&#x6001;&#x903B;&#x8F91;&#x5F88;&#x96BE;</li>
+<li>&#x89E3;&#x51B3;&#x590D;&#x6742;&#x7EC4;&#x4EF6;&#x53D8;&#x5F97;&#x96BE;&#x4EE5;&#x7406;&#x89E3;</li>
+<li>&#x89E3;&#x51B3;&#x96BE;&#x4EE5;&#x7406;&#x89E3;&#x7684; class</li>
+</ol>
+<h3 id="4-react-hooks-&#x6709;&#x54EA;&#x4E9B;&#xFF1F;">4. React Hooks &#x6709;&#x54EA;&#x4E9B;&#xFF1F;</h3>
+<ol>
+<li>&#x57FA;&#x7840; Hook<ul>
+<li>useState  <ul>
+<li>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; state&#xFF0C;&#x4EE5;&#x53CA;&#x66F4;&#x65B0; state &#x7684;&#x51FD;&#x6570;&#x3002; </li>
+</ul>
+</li>
+<li>useEffect <ul>
+<li>&#x8BE5; Hook &#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x547D;&#x4EE4;&#x5F0F;&#x3001;&#x4E14;&#x53EF;&#x80FD;&#x6709;&#x526F;&#x4F5C;&#x7528;&#x4EE3;&#x7801;&#x7684;&#x51FD;&#x6570;</li>
+</ul>
+</li>
+<li>useContext <ul>
+<li>&#x63A5;&#x6536;&#x4E00;&#x4E2A; context &#x5BF9;&#x8C61;&#xFF08;React.createContext &#x7684;&#x8FD4;&#x56DE;&#x503C;&#xFF09;&#x5E76;&#x8FD4;&#x56DE;&#x8BE5; context &#x7684;&#x5F53;&#x524D;&#x503C;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x989D;&#x5916;&#x7684; Hook<ul>
+<li>useReducer <ul>
+<li>useState &#x7684;&#x66FF;&#x4EE3;&#x65B9;&#x6848;&#x3002;&#x5B83;&#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x5F62;&#x5982; (state, action) =&gt; newState &#x7684; reducer&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x7684; state &#x4EE5;&#x53CA;&#x4E0E;&#x5176;&#x914D;&#x5957;&#x7684; dispatch &#x65B9;&#x6CD5;</li>
+</ul>
+</li>
+<li>useCallback <ul>
+<li>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; memoized &#x56DE;&#x8C03;&#x51FD;&#x6570;</li>
+</ul>
+</li>
+<li>useMemo <ul>
+<li>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; memoized &#x503C;</li>
+</ul>
+</li>
+<li>useRef   <ul>
+<li>useRef &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x53EF;&#x53D8;&#x7684; ref &#x5BF9;&#x8C61;</li>
+</ul>
+</li>
+<li>useImperativeHandle <ul>
+<li>useImperativeHandle &#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x5728;&#x4F7F;&#x7528; ref &#x65F6;&#x81EA;&#x5B9A;&#x4E49;&#x66B4;&#x9732;&#x7ED9;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x5B9E;&#x4F8B;&#x503C;</li>
+</ul>
+</li>
+<li>useLayoutEffect <ul>
+<li>&#x5176;&#x51FD;&#x6570;&#x7B7E;&#x540D;&#x4E0E; useEffect &#x76F8;&#x540C;&#xFF0C;&#x4F46;&#x5B83;&#x4F1A;&#x5728;&#x6240;&#x6709;&#x7684; DOM &#x53D8;&#x66F4;&#x4E4B;&#x540E;&#x540C;&#x6B65;&#x8C03;&#x7528; effect&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5B83;&#x6765;&#x8BFB;&#x53D6; DOM &#x5E03;&#x5C40;&#x5E76;&#x540C;&#x6B65;&#x89E6;&#x53D1;&#x91CD;&#x6E32;&#x67D3;&#x3002;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x6267;&#x884C;&#x7ED8;&#x5236;&#x4E4B;&#x524D;&#xFF0C;useLayoutEffect &#x5185;&#x90E8;&#x7684;&#x66F4;&#x65B0;&#x8BA1;&#x5212;&#x5C06;&#x88AB;&#x540C;&#x6B65;&#x5237;&#x65B0;&#x3002;</li>
+</ul>
+</li>
+<li>useDebugValue   <ul>
+<li>useDebugValue &#x53EF;&#x7528;&#x4E8E;&#x5728; React &#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x663E;&#x793A;&#x81EA;&#x5B9A;&#x4E49; hook &#x7684;&#x6807;&#x7B7E;&#x3002;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="5-&#x7B80;&#x5355;&#x4F7F;&#x7528;&#x4E00;&#x4E0B;&#x51E0;&#x4E2A;&#x5E38;&#x7528;react-hooks">5. &#x7B80;&#x5355;&#x4F7F;&#x7528;&#x4E00;&#x4E0B;&#x51E0;&#x4E2A;&#x5E38;&#x7528;React Hooks</h3>
+<font color="red" style="font-size: 18px;font-weight: bold;background: black;padding: 8px 10px;">
+    useState - &#x4EE3;&#x7801;&#x6F14;&#x793A;
+</font>
+
+<pre><code class="lang-js">    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Counter</span>(<span class="hljs-params">{initialCount}</span>) </span>{
+        <span class="hljs-keyword">const</span> [count, setCount] = useState(initialCount);
+        <span class="hljs-comment">/* 
+            * count &#x662F;&#x5B9A;&#x4E49;&#x7684;state 
+            * setCount &#x662F;&#x7528;&#x4E8E;&#x66F4;&#x65B0;count&#x7684;&#x65B9;&#x6CD5;
+        */</span>
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                Count: {count}
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> setCount(initialCount)}&gt;Reset<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> setCount(prevCount =&gt; prevCount - 1)}&gt;-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> setCount(prevCount =&gt; prevCount + 1)}&gt;+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+        );
+    }
+</code></pre>
+<font color="red" style="font-size: 18px;font-weight: bold;background: black;padding: 8px 10px;">
+    useEffect - &#x4EE3;&#x7801;&#x6F14;&#x793A;
+</font>
+
 <blockquote>
-<p>React &#x7EC4;&#x4EF6;&#x6DFB;&#x52A0;&#x6837;&#x5F0F;&#x7684;&#x7C7B;&#x578B;&#x4EE5;&#x4E0B;&#x56DB;&#x79CD;</p>
+<p>&#x5728;&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x4E3B;&#x4F53;&#x5185;&#xFF08;&#x8FD9;&#x91CC;&#x6307;&#x5728; React &#x6E32;&#x67D3;&#x9636;&#x6BB5;&#xFF09;&#x6539;&#x53D8; DOM&#x3001;&#x6DFB;&#x52A0;&#x8BA2;&#x9605;&#x3001;&#x8BBE;&#x7F6E;&#x5B9A;&#x65F6;&#x5668;&#x3001;&#x8BB0;&#x5F55;&#x65E5;&#x5FD7;&#x4EE5;&#x53CA;&#x6267;&#x884C;&#x5176;&#x4ED6;&#x5305;&#x542B;&#x526F;&#x4F5C;&#x7528;&#x7684;&#x64CD;&#x4F5C;&#x90FD;&#x662F;&#x4E0D;&#x88AB;&#x5141;&#x8BB8;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x53EF;&#x80FD;&#x4F1A;&#x4EA7;&#x751F;&#x83AB;&#x540D;&#x5176;&#x5999;&#x7684; bug &#x5E76;&#x7834;&#x574F; UI &#x7684;&#x4E00;&#x81F4;&#x6027;&#x3002; useEffect&#x63D0;&#x4F9B;&#x4E86;&#x8FD9;&#x4E9B;&#x526F;&#x4F5C;&#x7528;&#x64CD;&#x4F5C;&#x7684;&#x53EF;&#x80FD;</p>
 </blockquote>
-<h2 id="1-&#x884C;&#x5185;&#x6837;&#x5F0F;">1. &#x884C;&#x5185;&#x6837;&#x5F0F;</h2>
-<pre><code class="lang-javascript">    <span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
-    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Hello</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span></span>{
-        style = {
-            width: <span class="hljs-string">&apos;100px&apos;</span>,
-            height: <span class="hljs-string">&apos;100px&apos;</span>,
-            background: <span class="hljs-string">&apos;red&apos;</span>
-        }
-        render () {
-            <span class="hljs-keyword">return</span> (
-                <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-                    {/* &#x76F4;&#x63A5;&#x5728;&#x5143;&#x7D20;&#x4E0A;&#x4EE5;&#x5BF9;&#x8C61;&#x7684;&#x5F62;&#x5F0F;&#x6765;&#x8FDB;&#x884C;&#x6837;&#x5F0F;&#x7684;&#x5B9A;&#x4E49; */}    
-                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{</span> <span class="hljs-attr">this.style</span> } &gt;</span> &#x884C;&#x5185;&#x6837;&#x5F0F; <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
-            )
-        }
+<pre><code class="lang-js">    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Counter</span>(<span class="hljs-params">{initialCount}</span>) </span>{
+        <span class="hljs-keyword">const</span> [count, setCount] = useState(initialCount);
+        <span class="hljs-comment">/* 
+            * count &#x662F;&#x5B9A;&#x4E49;&#x7684;state 
+            * setCount &#x662F;&#x7528;&#x4E8E;&#x66F4;&#x65B0;count&#x7684;&#x65B9;&#x6CD5;
+        */</span>
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                Count: {count}
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> setCount(initialCount)}&gt;Reset<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> setCount(prevCount =&gt; prevCount - 1)}&gt;-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> setCount(prevCount =&gt; prevCount + 1)}&gt;+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+        );
     }
 </code></pre>
-<h2 id="2-&#x5916;&#x90E8;&#x5F15;&#x7528;">2. &#x5916;&#x90E8;&#x5F15;&#x7528;</h2>
-<pre><code class="lang-javascript">    <span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
-    <span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./index.css&apos;</span> 
-    <span class="hljs-comment">// OR</span>
-    <span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./index.scss&apos;</span>
-    <span class="hljs-comment">// OR</span>
-    <span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./index.less&apos;</span> 
-    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Hello</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span></span>{
-        render () {
-            <span class="hljs-keyword">return</span> (
-                <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-                    {/* &#x901A;&#x8FC7;className&#x6765;&#x7ED9;p&#x5143;&#x7D20;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x7C7B;&#x540D;&#xFF0C;&#x8BB0;&#x4F4F;&#x8FD9;&#x91CC;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;class&#x5173;&#x952E;&#x5B57;&#x6765;&#x7ED9;p&#x6DFB;&#x52A0;&#x7C7B;&#x540D; */}    
-                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">className</span> = &quot;<span class="hljs-attr">text</span>&quot;&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
-            )
+<font color="red" style="font-size: 18px;font-weight: bold;background: black;padding: 8px 10px;">
+    useContext - &#x4EE3;&#x7801;&#x6F14;&#x793A;
+</font>
+
+<blockquote>
+<ul>
+<li>useContext(MyContext) &#x76F8;&#x5F53;&#x4E8E; class &#x7EC4;&#x4EF6;&#x4E2D;&#x7684; static contextType = MyContext</li>
+<li>useContext(MyContext) &#x53EA;&#x662F;&#x8BA9;&#x4F60;&#x80FD;&#x591F;&#x8BFB;&#x53D6; context &#x7684;&#x503C;&#x4EE5;&#x53CA;&#x8BA2;&#x9605; context &#x7684;&#x53D8;&#x5316;&#x3002;&#x4F60;&#x4ECD;&#x7136;&#x9700;&#x8981;&#x5728;&#x4E0A;&#x5C42;&#x7EC4;&#x4EF6;&#x6811;&#x4E2D;&#x4F7F;&#x7528; <mycontext.provider> &#x6765;&#x4E3A;&#x4E0B;&#x5C42;&#x7EC4;&#x4EF6;&#x63D0;&#x4F9B; context</mycontext.provider></li>
+</ul>
+</blockquote>
+<pre><code class="lang-js">   <span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+   <span class="hljs-keyword">const</span> themes = {
+        light: {
+            foreground: <span class="hljs-string">&quot;#000000&quot;</span>,
+            background: <span class="hljs-string">&quot;#eeeeee&quot;</span>
+        },
+        dark: {
+            foreground: <span class="hljs-string">&quot;#ffffff&quot;</span>,
+            background: <span class="hljs-string">&quot;#222222&quot;</span>
         }
+    };
+
+    <span class="hljs-keyword">const</span> ThemeContext = React.createContext(themes.light);
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">App</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">return</span> (
+            &lt;ThemeContext.Provider value={themes.dark}&gt;
+            &lt;Toolbar /&gt;
+            &lt;/ThemeContext.Provider&gt;
+        );
+    }
+
+    function Toolbar(props) {
+        return (
+            &lt;div&gt;
+                &lt;ThemedButton /&gt;
+            &lt;/div&gt;
+        );
+    }
+
+    function ThemedButton() {
+        const theme = useContext(ThemeContext);
+        const style = { background: theme.background, color: theme.foreground }
+        return (
+            &lt;button style={ style }&gt;
+                I am styled by theme context!
+            &lt;/button&gt;
+        );
     }
 </code></pre>
-<h2 id="3-&#x4F7F;&#x7528;classname&#x7B2C;&#x4E09;&#x65B9;&#x6A21;&#x5757;">3. &#x4F7F;&#x7528;classname&#x7B2C;&#x4E09;&#x65B9;&#x6A21;&#x5757;</h2>
-<ol>
-<li><p>&#x5148;&#x5B89;&#x88C5;classname </p>
-<div style="background: black;text-align: justify;padding: 10px 8px;letter-spacing: 2px;">
- <font color="greenyellow" style="font-weight: bold;">  
-     $ yarn add classname
- </font>
-</div>
-</li>
-<li><p>&#x4F7F;&#x7528;</p>
-<pre><code class="lang-javascript"> <span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
- <span class="hljs-keyword">import</span> classname <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;classname&apos;</span>
- <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Hello</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span></span>{
-     render () {
-         <span class="hljs-keyword">return</span> (
-             <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-                 {/* &#x901A;&#x8FC7;&#x8C03;&#x7528;clasname&#xFF0C;&#x5E76;&#x4E14;&#x7ED9;&#x91CC;&#x9762;&#x7684;key&#x6DFB;&#x52A0;&#x5E03;&#x5C14;&#x503C;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x786E;&#x5B9A;&#x8FD9;&#x4E2A;&#x7C7B;&#x540D;&#x662F;&#x5426;&#x8981;&#x6DFB;&#x52A0; */}    
-                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">className</span> = {<span class="hljs-attr">classname</span>({
-                     <span class="hljs-attr">size:</span> <span class="hljs-attr">true</span>,
-                     <span class="hljs-attr">bg:</span> <span class="hljs-attr">false</span>
-                 })}&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
-         )
-     }
- }
-</code></pre>
-</li>
-</ol>
-<h2 id="4-&#x6837;&#x5F0F;&#x7EC4;&#x4EF6;">4. &#x6837;&#x5F0F;&#x7EC4;&#x4EF6;</h2>
-<ol>
-<li><p>&#x5148;&#x5B89;&#x88C5;styled-component </p>
-<div style="background: black;text-align: justify;padding: 10px 8px;letter-spacing: 2px;">
- <font color="greenyellow" style="font-weight: bold;">  
-     $ yarn add styled-components
- </font>
-</div>
-</li>
-<li><p>&#x4F7F;&#x7528;</p>
-<pre><code class="lang-javascript"> <span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
- <span class="hljs-keyword">import</span> styled <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;styled-components&apos;</span>
- <span class="hljs-keyword">const</span> Container = styled.div<span class="hljs-string">`
-     width: 100px;
-     height: 100px;
-     background: #ccc;
- `</span>
- <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Hello</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span></span>{
-     render () {
-         <span class="hljs-keyword">return</span> (
-             {<span class="hljs-comment">/* Container&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x7EC4;&#x4EF6;&#x76F4;&#x63A5;&#x4F7F;&#x7528; */</span>}
-             &lt;Container&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">Container</span>&gt;</span></span>
-         )
-     }
- }
-</code></pre>
-</li>
-</ol>
 
                                 
                                 </section>
@@ -681,12 +750,12 @@
 
             
                 
-                <a href="组件组合&&嵌套.html" class="navigation navigation-prev " aria-label="Previous page: 组件的组合&&嵌套">
+                <a href="高阶组件.html" class="navigation navigation-prev " aria-label="Previous page: 高阶组件">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="组件的数据形式.html" class="navigation navigation-next " aria-label="Next page: 组件的数据形式">
+                <a href="React路由.html" class="navigation navigation-next " aria-label="Next page: React路由">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -697,7 +766,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"组件的样式","level":"1.5.4","depth":2,"next":{"title":"组件的数据形式","level":"1.5.5","depth":2,"path":"组件的数据形式.md","ref":"组件的数据形式.md","articles":[]},"previous":{"title":"组件的组合&&嵌套","level":"1.5.3","depth":2,"path":"组件组合&&嵌套.md","ref":"组件组合&&嵌套.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","livereload"],"styles":{"website":"css/website.css"},"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"闫亚兵","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"请关注我":"https://github.com/search?q=yanyabing1&type=Users"}},"gitbook":"*"},"file":{"path":"组件的样式.md","mtime":"2019-11-19T16:40:28.188Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-20T14:17:44.066Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"React Hooks","level":"1.6.2","depth":2,"next":{"title":"React路由","level":"1.6.3","depth":2,"path":"React路由.md","ref":"React路由.md","articles":[]},"previous":{"title":"高阶组件","level":"1.6.1","depth":2,"path":"高阶组件.md","ref":"高阶组件.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","livereload"],"styles":{"website":"css/website.css"},"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"闫亚兵","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"请关注我":"https://github.com/search?q=yanyabing1&type=Users"}},"gitbook":"*"},"file":{"path":"React Hooks.md","mtime":"2019-11-20T09:31:41.733Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-20T14:17:44.066Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
