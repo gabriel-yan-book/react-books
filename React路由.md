@@ -34,7 +34,7 @@
   https://reacttraining.com/react-router/web/guides/quick-start
 
 ## 4. react-router效果演示
-<font color = "red" style = "font-size: 18px;font-weight: bold;background: black;padding: 8px 10px;">
+<!-- <font color = "red" style = "font-size: 18px;font-weight: bold;background: black;padding: 8px 10px;">
     移动端项目案例
 </font>
 <br/>
@@ -43,9 +43,12 @@
 <font color = "red" style = "font-size: 18px;font-weight: bold;background: black;padding: 8px 10px;">
     pc端项目案例
 </font>
-<img src = "http://static.oschina.net/uploads/space/2017/1018/074540_IE6W_2720166.gif"/>
+<img src = "http://static.oschina.net/uploads/space/2017/1018/074540_IE6W_2720166.gif"/> -->
+
+<hr/>
 
 ## 5. react-router使用
+
 1. 创建React项目
 <div
     style = "background: black;text-align: justify;padding: 10px 8px;letter-spacing: 2px;"
@@ -68,4 +71,124 @@
     </font>
 </div>
 
-3. 在项目入口文件
+3. 在项目入口文件中配置路由模式
+```js
+    import React from 'react';
+    import ReactDOM from 'react-dom';
+    import './index.css';
+    import App from './App';
+    import * as serviceWorker from './serviceWorker';
+
+    /* 
+        * 1. React路由模式有两种： 
+            1. HashRouter[ #/home 传统浏览器模式 hashchange ]  
+            2. BrowserRouter[ /home  h5 history模式 ]
+        * 2. BrowserRouter需要后端支持
+        * 3. as的作用是给一个模块起一个别名
+    */
+    import { BrowserRouter as Router } from 'react-router-dom'
+
+    ReactDOM.render(
+    <Router>
+        <App />
+    </Router>
+    , document.getElementById('root'));
+
+    serviceWorker.unregister();
+```
+
+4. 在项目中新建index.js,     src/router/index.js
+```js
+    import React, { Component,Fragment } from 'react'
+    import Home from './../pages/home/index';
+    import Recommend from './../pages/recommend/index';
+    import Category from './../pages/category/index';
+    import Mine from './../pages/mine/index';
+    import ShopCar from './../pages/shopcar/index';
+    import NotFound from './../pages/notfound/index';
+    import Login from './../pages/login/index';
+    import Register from './../pages/register/index';
+    import List from './../pages/list/index';
+    import Detail from './../pages/detail/index';
+    import { Route,Switch,Redirect,withRouter } from 'react-router-dom'
+    /* 
+        * Route是用来通过path路径来匹配对应的组件,一个Route组件就是一个路由的配置
+            * path    路由路径
+            * component  路由对应的组件
+            * render 可以渲染一个组件
+            * children 子组件
+            ! component  / render /children 选一个使用
+
+            * component vs render vs children 
+            1. 使用了Route并使用了component属性之后，我们的组件称之为路由组件，有路由属性【 history/location/match 】
+            2. 使用render的话，我们发现组件的路由属性是没有的，但是我们可以给我们的组件绑定数据了
+            3. 使用children的话，我们不仅可以绑定数据，也可以有路由属性 
+        * Switch表示一次只渲染一个路由
+        * Redirect  重定向组件
+        
+        ! exact  它表示路径完全匹配      /        /home       /home/hot
+    */
+
+    export default class RouteComp extends Component{
+        render () {
+            return (
+                <div>
+                    <Switch>
+                        <Redirect from = "/" to = "/home" exact/>
+                        <Route path = "/home" component = { Home }/>
+                        <Route path = "/recommend" component = { Recommend }/>
+                        <Route path = "/category" component = { Category }/>
+                        <Route path = "/shopcar" component = { ShopCar }/>
+                        {/* <Route path = "/mine" component = { Mine }/> */}
+                        {/* <Route path = "/mine" render = {() => <Mine name = { name } />}/> */}
+                        <Route path = "/mine" children = {() => <Mine name = { name } />}/>
+                        <Route path = "/login" component = { Login } />
+                        <Route path = "/register" component = { Register } />
+                        <Route path = "/list/:id" component = { List } />
+                        <Route path = "/detail/:id" component = { Detail } />
+                        <Route  component = { NotFound }/> 
+                    </Switch>
+                </div>
+            )
+        }
+    }
+```
+
+5. 二级路由配置,Home.js中配置二级路由 
+   
+```js
+    import React, { Component } from 'react'
+    import './index.scss'
+    import Nav from './Nav'
+    import { Route,Redirect } from 'react-router-dom'
+    import Hot from './Hot';
+    import Comming from './Comming';
+    export default class Home extends Component {
+
+        render() {
+            return (
+            <div className = "container">
+                {/* 导航 */}
+                <Nav/>
+                {/* 路由展示区域 */}
+                {/* <Redirect from  = "/home" to = "/home/hot" exact/> */}
+                <Route path = "/home/hot" component = { Hot } />
+                <Route path = "/home/comming"  component = { Comming } />
+            </div>
+            )
+        }
+    }
+
+```
+
+
+6. 动态路由
+> - 路由传参
+> - 路由接参
+> - 案例效果
+>   - 移动端分类 -> 列表 -> 详情 -> 购物车
+
+7. 路由监听
+> - 移动端
+>   - 某些界面效果显示有无
+

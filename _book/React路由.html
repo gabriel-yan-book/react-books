@@ -393,6 +393,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.5.11" data-path="React过渡动效实现.html">
+            
+                <a href="React过渡动效实现.html">
+            
+                    
+                    React过渡动效实现
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -578,15 +591,18 @@
 <h2 id="3-react-router&#x5B98;&#x7F51;&#x6587;&#x6863;">3. react-router&#x5B98;&#x7F51;&#x6587;&#x6863;</h2>
 <p>  <a href="https://reacttraining.com/react-router/web/guides/quick-start" target="_blank">https://reacttraining.com/react-router/web/guides/quick-start</a></p>
 <h2 id="4-react-router&#x6548;&#x679C;&#x6F14;&#x793A;">4. react-router&#x6548;&#x679C;&#x6F14;&#x793A;</h2>
-<p><font color="red" style="font-size: 18px;font-weight: bold;background: black;padding: 8px 10px;">
-    &#x79FB;&#x52A8;&#x7AEF;&#x9879;&#x76EE;&#x6848;&#x4F8B;
+<!-- <font color = "red" style = "font-size: 18px;font-weight: bold;background: black;padding: 8px 10px;">
+    移动端项目案例
 </font>
-<br>
-<img src="http://test.fe.ptdev.cn/elm/screenshots/confrimOrder.gif"></p>
-<p><font color="red" style="font-size: 18px;font-weight: bold;background: black;padding: 8px 10px;">
-    pc&#x7AEF;&#x9879;&#x76EE;&#x6848;&#x4F8B;
+<br/>
+<img src = "http://test.fe.ptdev.cn/elm/screenshots/confrimOrder.gif"/>
+
+<font color = "red" style = "font-size: 18px;font-weight: bold;background: black;padding: 8px 10px;">
+    pc端项目案例
 </font>
-<img src="http://static.oschina.net/uploads/space/2017/1018/074540_IE6W_2720166.gif"></p>
+<img src = "http://static.oschina.net/uploads/space/2017/1018/074540_IE6W_2720166.gif"/> -->
+<hr>
+
 <h2 id="5-react-router&#x4F7F;&#x7528;">5. react-router&#x4F7F;&#x7528;</h2>
 <ol>
 <li><p>&#x521B;&#x5EFA;React&#x9879;&#x76EE;</p>
@@ -606,6 +622,135 @@
     $ yarn add react-router-dom
  </font>
 </div>
+</li>
+<li><p>&#x5728;&#x9879;&#x76EE;&#x5165;&#x53E3;&#x6587;&#x4EF6;&#x4E2D;&#x914D;&#x7F6E;&#x8DEF;&#x7531;&#x6A21;&#x5F0F;</p>
+<pre><code class="lang-js"> <span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+ <span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+ <span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./index.css&apos;</span>;
+ <span class="hljs-keyword">import</span> App <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./App&apos;</span>;
+ <span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> serviceWorker <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./serviceWorker&apos;</span>;
+
+ <span class="hljs-comment">/* 
+     * 1. React&#x8DEF;&#x7531;&#x6A21;&#x5F0F;&#x6709;&#x4E24;&#x79CD;&#xFF1A; 
+         1. HashRouter[ #/home &#x4F20;&#x7EDF;&#x6D4F;&#x89C8;&#x5668;&#x6A21;&#x5F0F; hashchange ]  
+         2. BrowserRouter[ /home  h5 history&#x6A21;&#x5F0F; ]
+     * 2. BrowserRouter&#x9700;&#x8981;&#x540E;&#x7AEF;&#x652F;&#x6301;
+     * 3. as&#x7684;&#x4F5C;&#x7528;&#x662F;&#x7ED9;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#x8D77;&#x4E00;&#x4E2A;&#x522B;&#x540D;
+ */</span>
+ <span class="hljs-keyword">import</span> { BrowserRouter <span class="hljs-keyword">as</span> Router } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>
+
+ ReactDOM.render(
+ <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Router</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">Router</span>&gt;</span>
+ , document.getElementById(&apos;root&apos;));
+
+ serviceWorker.unregister();
+</span></code></pre>
+</li>
+<li><p>&#x5728;&#x9879;&#x76EE;&#x4E2D;&#x65B0;&#x5EFA;index.js,     src/router/index.js</p>
+<pre><code class="lang-js"> <span class="hljs-keyword">import</span> React, { Component,Fragment } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+ <span class="hljs-keyword">import</span> Home <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./../pages/home/index&apos;</span>;
+ <span class="hljs-keyword">import</span> Recommend <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./../pages/recommend/index&apos;</span>;
+ <span class="hljs-keyword">import</span> Category <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./../pages/category/index&apos;</span>;
+ <span class="hljs-keyword">import</span> Mine <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./../pages/mine/index&apos;</span>;
+ <span class="hljs-keyword">import</span> ShopCar <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./../pages/shopcar/index&apos;</span>;
+ <span class="hljs-keyword">import</span> NotFound <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./../pages/notfound/index&apos;</span>;
+ <span class="hljs-keyword">import</span> Login <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./../pages/login/index&apos;</span>;
+ <span class="hljs-keyword">import</span> Register <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./../pages/register/index&apos;</span>;
+ <span class="hljs-keyword">import</span> List <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./../pages/list/index&apos;</span>;
+ <span class="hljs-keyword">import</span> Detail <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./../pages/detail/index&apos;</span>;
+ <span class="hljs-keyword">import</span> { Route,Switch,Redirect,withRouter } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>
+ <span class="hljs-comment">/* 
+     * Route&#x662F;&#x7528;&#x6765;&#x901A;&#x8FC7;path&#x8DEF;&#x5F84;&#x6765;&#x5339;&#x914D;&#x5BF9;&#x5E94;&#x7684;&#x7EC4;&#x4EF6;,&#x4E00;&#x4E2A;Route&#x7EC4;&#x4EF6;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x8DEF;&#x7531;&#x7684;&#x914D;&#x7F6E;
+         * path    &#x8DEF;&#x7531;&#x8DEF;&#x5F84;
+         * component  &#x8DEF;&#x7531;&#x5BF9;&#x5E94;&#x7684;&#x7EC4;&#x4EF6;
+         * render &#x53EF;&#x4EE5;&#x6E32;&#x67D3;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;
+         * children &#x5B50;&#x7EC4;&#x4EF6;
+         ! component  / render /children &#x9009;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;
+
+         * component vs render vs children 
+         1. &#x4F7F;&#x7528;&#x4E86;Route&#x5E76;&#x4F7F;&#x7528;&#x4E86;component&#x5C5E;&#x6027;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x7EC4;&#x4EF6;&#x79F0;&#x4E4B;&#x4E3A;&#x8DEF;&#x7531;&#x7EC4;&#x4EF6;&#xFF0C;&#x6709;&#x8DEF;&#x7531;&#x5C5E;&#x6027;&#x3010; history/location/match &#x3011;
+         2. &#x4F7F;&#x7528;render&#x7684;&#x8BDD;&#xFF0C;&#x6211;&#x4EEC;&#x53D1;&#x73B0;&#x7EC4;&#x4EF6;&#x7684;&#x8DEF;&#x7531;&#x5C5E;&#x6027;&#x662F;&#x6CA1;&#x6709;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7ED9;&#x6211;&#x4EEC;&#x7684;&#x7EC4;&#x4EF6;&#x7ED1;&#x5B9A;&#x6570;&#x636E;&#x4E86;
+         3. &#x4F7F;&#x7528;children&#x7684;&#x8BDD;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x4EC5;&#x53EF;&#x4EE5;&#x7ED1;&#x5B9A;&#x6570;&#x636E;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x6709;&#x8DEF;&#x7531;&#x5C5E;&#x6027; 
+     * Switch&#x8868;&#x793A;&#x4E00;&#x6B21;&#x53EA;&#x6E32;&#x67D3;&#x4E00;&#x4E2A;&#x8DEF;&#x7531;
+     * Redirect  &#x91CD;&#x5B9A;&#x5411;&#x7EC4;&#x4EF6;
+
+     ! exact  &#x5B83;&#x8868;&#x793A;&#x8DEF;&#x5F84;&#x5B8C;&#x5168;&#x5339;&#x914D;      /        /home       /home/hot
+ */</span>
+
+ <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RouteComp</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span></span>{
+     render () {
+         <span class="hljs-keyword">return</span> (
+             &lt;div&gt;
+                 &lt;Switch&gt;
+                     &lt;Redirect from = &quot;/&quot; to = &quot;/home&quot; exact/&gt;
+                     &lt;Route path = &quot;/home&quot; component = { Home }/&gt;
+                     &lt;Route path = &quot;/recommend&quot; component = { Recommend }/&gt;
+                     &lt;Route path = &quot;/category&quot; component = { Category }/&gt;
+                     &lt;Route path = &quot;/shopcar&quot; component = { ShopCar }/&gt;
+                     {/* &lt;Route path = &quot;/mine&quot; component = { Mine }/&gt; */}
+                     {/* &lt;Route path = &quot;/mine&quot; render = {() =&gt; &lt;Mine name = { name } /&gt;}/&gt; */}
+                     &lt;Route path = &quot;/mine&quot; children = {() =&gt; &lt;Mine name = { name } /&gt;}/&gt;
+                     &lt;Route path = &quot;/login&quot; component = { Login } /&gt;
+                     &lt;Route path = &quot;/register&quot; component = { Register } /&gt;
+                     &lt;Route path = &quot;/list/:id&quot; component = { List } /&gt;
+                     &lt;Route path = &quot;/detail/:id&quot; component = { Detail } /&gt;
+                     &lt;Route  component = { NotFound }/&gt; 
+                 &lt;/Switch&gt;
+             &lt;/div&gt;
+         )
+     }
+ }
+</code></pre>
+</li>
+<li><p>&#x4E8C;&#x7EA7;&#x8DEF;&#x7531;&#x914D;&#x7F6E;,Home.js&#x4E2D;&#x914D;&#x7F6E;&#x4E8C;&#x7EA7;&#x8DEF;&#x7531; </p>
+</li>
+</ol>
+<pre><code class="lang-js">    <span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+    <span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./index.scss&apos;</span>
+    <span class="hljs-keyword">import</span> Nav <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./Nav&apos;</span>
+    <span class="hljs-keyword">import</span> { Route,Redirect } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>
+    <span class="hljs-keyword">import</span> Hot <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./Hot&apos;</span>;
+    <span class="hljs-keyword">import</span> Comming <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./Comming&apos;</span>;
+    <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Home</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+
+        render() {
+            <span class="hljs-keyword">return</span> (
+            &lt;div className = &quot;container&quot;&gt;
+                {/* &#x5BFC;&#x822A; */}
+                &lt;Nav/&gt;
+                {/* &#x8DEF;&#x7531;&#x5C55;&#x793A;&#x533A;&#x57DF; */}
+                {/* &lt;Redirect from  = &quot;/home&quot; to = &quot;/home/hot&quot; exact/&gt; */}
+                &lt;Route path = &quot;/home/hot&quot; component = { Hot } /&gt;
+                &lt;Route path = &quot;/home/comming&quot;  component = { Comming } /&gt;
+            &lt;/div&gt;
+            )
+        }
+    }
+</code></pre>
+<ol>
+<li><p>&#x52A8;&#x6001;&#x8DEF;&#x7531;</p>
+<blockquote>
+<ul>
+<li>&#x8DEF;&#x7531;&#x4F20;&#x53C2;</li>
+<li>&#x8DEF;&#x7531;&#x63A5;&#x53C2;</li>
+<li>&#x6848;&#x4F8B;&#x6548;&#x679C;<ul>
+<li>&#x79FB;&#x52A8;&#x7AEF;&#x5206;&#x7C7B; -&gt; &#x5217;&#x8868; -&gt; &#x8BE6;&#x60C5; -&gt; &#x8D2D;&#x7269;&#x8F66;</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p>&#x8DEF;&#x7531;&#x76D1;&#x542C;</p>
+<blockquote>
+<ul>
+<li>&#x79FB;&#x52A8;&#x7AEF;<ul>
+<li>&#x67D0;&#x4E9B;&#x754C;&#x9762;&#x6548;&#x679C;&#x663E;&#x793A;&#x6709;&#x65E0;</li>
+</ul>
+</li>
+</ul>
+</blockquote>
 </li>
 </ol>
 
@@ -651,7 +796,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"React路由","level":"1.6.3","depth":2,"next":{"title":"React状态管理","level":"1.6.4","depth":2,"path":"React状态管理.md","ref":"React状态管理.md","articles":[]},"previous":{"title":"React Hooks","level":"1.6.2","depth":2,"path":"React Hooks.md","ref":"React Hooks.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","livereload"],"styles":{"website":"css/website.css"},"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"闫亚兵","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"请关注我":"https://github.com/search?q=yanyabing1&type=Users"}},"gitbook":"*"},"file":{"path":"React路由.md","mtime":"2019-11-20T14:42:01.653Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-20T14:17:44.066Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"React路由","level":"1.6.3","depth":2,"next":{"title":"React状态管理","level":"1.6.4","depth":2,"path":"React状态管理.md","ref":"React状态管理.md","articles":[]},"previous":{"title":"React Hooks","level":"1.6.2","depth":2,"path":"React Hooks.md","ref":"React Hooks.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","livereload"],"styles":{"website":"css/website.css"},"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"闫亚兵","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"请关注我":"https://github.com/search?q=yanyabing1&type=Users"}},"gitbook":"*"},"file":{"path":"React路由.md","mtime":"2019-11-22T03:53:46.932Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-22T03:49:00.748Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
