@@ -154,39 +154,83 @@
     }
 ```
 
-5. 二级路由配置,Home.js中配置二级路由 
-   
+5. 二级路由配置
 ```js
-    import React, { Component } from 'react'
-    import './index.scss'
-    import Nav from './Nav'
-    import { Route,Redirect } from 'react-router-dom'
-    import Hot from './Hot';
-    import Comming from './Comming';
-    export default class Home extends Component {
-
-        render() {
+    import React,{ Component } from 'react'
+    import { Route,NavLink } from 'react-router-dom'
+    import Hot from './Hot.js'
+    import Coming from './Coming.js'
+    class Home extends Component{
+        render () {
             return (
-            <div className = "container">
-                {/* 导航 */}
-                <Nav/>
-                {/* 路由展示区域 */}
-                {/* <Redirect from  = "/home" to = "/home/hot" exact/> */}
-                <Route path = "/home/hot" component = { Hot } />
-                <Route path = "/home/comming"  component = { Comming } />
-            </div>
+                <div>
+                    {/* 二级路由导航 */}
+                    <NavLink to = "/home/hot"> 正在热映 </NavLink>
+                    <NavLink to = "/home/coming"> 即将上映 </NavLink>
+                    {/* 二级路由展示区域 */}
+                    <Route path = "/home/hot" Component = { Hot } />
+                    <Route path = "/home/coming" Component = { Coming } />
+                </div>
             )
         }
     }
-
 ```
-
 
 6. 动态路由
 > - 路由传参
 > - 路由接参
 > - 案例效果
 >   - 移动端分类 -> 列表 -> 详情 -> 购物车
+
+<font color = "red" style = "font-size: 18px;font-weight: bold;background: black;padding: 8px 10px;">
+    路由传参 - 代码演示
+</font>
+
+```js
+    import React, { Component,Fragment } from 'react'
+    import { Link } from 'react-router-dom'
+    class Category extends Component{
+        render () {
+            const route = {
+                pathname: '/list/1',
+                search: 'cid=23&shopname=电脑'
+            }
+            return (
+                <Fragment>
+                    <Link
+                        to = { route }
+                    >
+                        商品一
+                    </Link>
+                </Fragment>
+            )
+        }
+    }
+
+```
+<font color = "red" style = "font-size: 18px;font-weight: bold;background: black;padding: 8px 10px;">
+    路由接参 - 代码演示
+</font>
+
+```js
+    import React, { Component,Fragment } from 'react'
+    import { Link } from 'react-router-dom'
+    import qs from 'querystring'
+    class Category extends Component{
+        render () {
+            const search = qs.parse( this.props.location.search.slice(1) )
+            const params = this.props.location.params
+            return (
+                <Fragment>
+                    <p> 接收的id为： { params.id } </p>
+                    <p> 接收的cid为： { search.cid } </p>
+                    <p> 接收的shopname为： { search.shopname } </p>
+                </Fragment>
+            )
+        }
+    }
+
+```
 
 7. 路由监听
 > - 移动端
