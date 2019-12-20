@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>React过渡动效实现 · GitBook</title>
+        <title>Mobx · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -54,7 +54,7 @@
 
     
     
-    <link rel="prev" href="组件的生命周期.html" />
+    <link rel="prev" href="Redux.html" />
     
 
     </head>
@@ -391,7 +391,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.11" data-path="React过渡动效实现.html">
+        <li class="chapter " data-level="1.5.11" data-path="React过渡动效实现.html">
             
                 <a href="React过渡动效实现.html">
             
@@ -502,7 +502,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.4.3" data-path="Mobx.html">
+        <li class="chapter active" data-level="1.6.4.3" data-path="Mobx.html">
             
                 <a href="Mobx.html">
             
@@ -587,7 +587,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >React过渡动效实现</a>
+        <a href="." >Mobx</a>
     </h1>
 </div>
 
@@ -612,60 +612,12 @@
         font-size: 24px;
         font-weight: bold;
     "> 
-  React&#x8FC7;&#x6E21;&#x52A8;&#x6548;
+    React &#x72B6;&#x6001;&#x7BA1;&#x7406; 
 </div>
 
-<h2 id="1-&#x8BF4;&#x660E;">1. &#x8BF4;&#x660E;</h2>
-<ul>
-<li>&#x8FC7;&#x6E21;&#x52A8;&#x6548;&#x5728;&#x9879;&#x76EE;&#x4E2D;&#x662F;&#x4E00;&#x4E2A;&#x5FC5;&#x987B;&#x7684;&#x4E1A;&#x52A1;</li>
-<li>React&#x8FC7;&#x6E21;&#x52A8;&#x6548;&#x901A;&#x8FC7;react-transition-group&#x8FD9;&#x4E2A;&#x7B2C;&#x4E09;&#x65B9;&#x6A21;&#x5757;&#x6765;&#x5B9E;&#x73B0;</li>
-</ul>
-<h2 id="2-&#x4EE3;&#x7801;&#x6F14;&#x793A;">2. &#x4EE3;&#x7801;&#x6F14;&#x793A;</h2>
-<pre><code class="lang-js">  <span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
-  <span class="hljs-keyword">import</span> { CSSTransition } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-transition-group&apos;</span>
-
-  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Home</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
-
-    <span class="hljs-keyword">constructor</span>(props) {
-      <span class="hljs-keyword">super</span>(props)
-
-      <span class="hljs-keyword">this</span>.state = {
-        flag: <span class="hljs-literal">true</span> 
-      }
-    }
-
-    changeFlag = () =&gt; {
-      <span class="hljs-keyword">this</span>.setState({
-        flag: !<span class="hljs-keyword">this</span>.state.flag 
-      })
-    }
-
-    render() {
-      <span class="hljs-keyword">const</span> { flag } = <span class="hljs-keyword">this</span>.state 
-      <span class="hljs-keyword">const</span> classname = {
-              enter: <span class="hljs-string">&apos;animated&apos;</span>, <span class="hljs-comment">// &#x521A;&#x521A;&#x8FDB;&#x5165;&#x90A3;&#x4E00;&#x523B;</span>
-              enterActive: <span class="hljs-string">&apos;slideInLeft&apos;</span>,<span class="hljs-comment">// &#x8FDB;&#x5165;&#x7684;&#x6574;&#x4E2A;&#x8FC7;&#x7A0B;</span>
-              exit: <span class="hljs-string">&apos;animated&apos;</span>,<span class="hljs-comment">//&#x79BB;&#x5F00;&#x7684;&#x90A3;&#x4E00;&#x523B;</span>
-              exitActive: <span class="hljs-string">&apos;slideOutLeft&apos;</span><span class="hljs-comment">// &#x79BB;&#x5F00;&#x7684;&#x8FC7;&#x7A0B;</span>
-            }
-      <span class="hljs-keyword">return</span> (
-        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span> = { <span class="hljs-attr">this.changeFlag</span> }&gt;</span> &#x70B9;&#x51FB; <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-          {/* p&#x5C31;&#x662F;&#x6211;&#x60F3;&#x8981;&#x7ED9;p&#x6DFB;&#x52A0;&#x52A8;&#x4F5C;&#x6548;&#x679C; */}
-          <span class="hljs-tag">&lt;<span class="hljs-name">CSSTransition</span>
-            <span class="hljs-attr">in</span> = { <span class="hljs-attr">flag</span> } //<span class="hljs-attr">in</span>&#x7684;&#x503C;&#x5FC5;&#x987B;&#x53D8;&#x5316;&#x7684;
-            <span class="hljs-attr">timeout</span> = { <span class="hljs-attr">1000</span> } // &#x52A8;&#x753B;&#x7684;&#x5EF6;&#x8FDF;&#x65F6;&#x95F4;
-            <span class="hljs-attr">unmountOnExit</span>
-            <span class="hljs-attr">classNames</span> = { <span class="hljs-attr">classname</span> }
-          &gt;</span>
-            {/* &#x4F7F;&#x7528;CSSTransition&#x7EC4;&#x4EF6;&#x5305;&#x88F9;&#x52A8;&#x753B;&#x5143;&#x7D20; */}
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span> &#x52A8;&#x753B;&#x5143;&#x7D20; <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">CSSTransition</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
-      )
-    }
-  }
-</code></pre>
+<h2 id="1-&#x4E86;&#x89E3;-redux-&#x53CA;&#x5176;-&#x4F5C;&#x7528;">1. &#x4E86;&#x89E3; redux &#x53CA;&#x5176; &#x4F5C;&#x7528;</h2>
+<h2 id="2-redux&#x57FA;&#x7840;&#x4F7F;&#x7528;">2. redux&#x57FA;&#x7840;&#x4F7F;&#x7528;</h2>
+<h2 id="3-redux&#x9879;&#x76EE;&#x5E94;&#x7528;">3. redux&#x9879;&#x76EE;&#x5E94;&#x7528;</h2>
 
                                 
                                 </section>
@@ -693,7 +645,7 @@
 
             
                 
-                <a href="组件的生命周期.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 组件的生命周期">
+                <a href="Redux.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Redux">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -705,7 +657,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"React过渡动效实现","level":"1.5.11","depth":2,"next":{"title":"React高级","level":"1.6","depth":1,"ref":"","articles":[{"title":"高阶组件","level":"1.6.1","depth":2,"path":"高阶组件.md","ref":"高阶组件.md","articles":[]},{"title":"React Hooks","level":"1.6.2","depth":2,"path":"React Hooks.md","ref":"React Hooks.md","articles":[]},{"title":"React路由","level":"1.6.3","depth":2,"path":"React路由.md","ref":"React路由.md","articles":[]},{"title":"React状态管理","level":"1.6.4","depth":2,"path":"React状态管理介绍.md","ref":"React状态管理介绍.md","articles":[{"title":"Flux","level":"1.6.4.1","depth":3,"path":"Flux.md","ref":"Flux.md","articles":[]},{"title":"Redux","level":"1.6.4.2","depth":3,"path":"Redux.md","ref":"Redux.md","articles":[]},{"title":"Mobx","level":"1.6.4.3","depth":3,"path":"Mobx.md","ref":"Mobx.md","articles":[]}]}]},"previous":{"title":"组件的生命周期","level":"1.5.10","depth":2,"path":"组件的生命周期.md","ref":"组件的生命周期.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","livereload"],"styles":{"website":"css/website.css"},"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"闫亚兵","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"请关注我":"https://github.com/search?q=yanyabing1&type=Users"}},"gitbook":"*"},"file":{"path":"React过渡动效实现.md","mtime":"2019-11-22T03:03:32.298Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-20T03:13:01.090Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Mobx","level":"1.6.4.3","depth":3,"next":{"title":"React应用","level":"1.7","depth":1,"ref":"","articles":[{"title":"React组件库","level":"1.7.1","depth":2,"path":"React组件库.md","ref":"React组件库.md","articles":[]}]},"previous":{"title":"Redux","level":"1.6.4.2","depth":3,"path":"Redux.md","ref":"Redux.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","livereload"],"styles":{"website":"css/website.css"},"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"闫亚兵","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"请关注我":"https://github.com/search?q=yanyabing1&type=Users"}},"gitbook":"*"},"file":{"path":"Mobx.md","mtime":"2019-12-19T09:58:51.408Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-20T03:13:01.090Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

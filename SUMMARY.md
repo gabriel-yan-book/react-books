@@ -27,7 +27,10 @@
     * [高阶组件](高阶组件.md)
     * [React Hooks](React Hooks.md)
     * [React路由](React路由.md)
-    * [React状态管理](React状态管理.md)
+    * [React状态管理]( React状态管理介绍.md )
+      * [Flux](Flux.md)
+      * [Redux](Redux.md)
+      * [Mobx](Mobx.md)
 * [React应用]()
     * [React组件库](React组件库.md)
 
